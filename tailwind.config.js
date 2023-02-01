@@ -18,7 +18,11 @@ module.exports = {
       },
       backgroundImage: {
         'bghome': "url('/dist/img/home-bg3.jpg')",
-      }
+      },
+      lineClamp: {
+        10: "10",
+        12: "12",
+      },
     },
     screens: {
       'sm': '640px',
@@ -28,5 +32,10 @@ module.exports = {
       '2xl': '1320px',
     }
   },
-  plugins: [],
+  variants: {
+    extend: {
+      lineClamp: ["hover"],
+    },
+  },
+  plugins: [require("@tailwindcss/line-clamp")],
 }
