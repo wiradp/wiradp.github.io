@@ -1,4 +1,4 @@
-## [Welcome to My Personal Website ](https://wiradp.github.io/)
+## Welcome to My Personal Website :point_right: [link](https://wiradp.github.io/)
 
 ![bg](dist/img/about-wira-bg2.jpg)
 
