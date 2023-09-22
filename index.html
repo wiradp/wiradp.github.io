@@ -1,84 +1,57 @@
 <!DOCTYPE html>
 <html class="scroll-smooth" lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="dist/output.css" rel="stylesheet" />
-    <title>My Portfolio</title>
-  </head>
-  <body>
-    <!-- Header Start -->
-    <header class="bg-transparent left-0 w-full top-0 sticky">
-      <div class="relative z-20 border-b bg-white">
-        <div class="px-6 md:px-12 lg:container lg:mx-auto lg:px-6 lg:py-4">
-          <div class="flex items-center justify-between">
-            <div class="relative z-20">
-              <a href="#">
-                <img src="/dist/img/logo.png" alt="logo-tailus" class="w-14" />
-              </a>
-            </div>
 
-            <div class="flex items-center justify-end border-l lg:border-l-0">
-              <input
-                type="checkbox"
-                name="hamburger"
-                id="hamburger"
-                class="peer"
-                hidden
-              />
-              <label
-                for="hamburger"
-                class="peer-checked:hamburger block relative z-20 p-6 -mr-6 cursor-pointer lg:hidden"
-              >
-                <div
-                  aria-hidden="true"
-                  class="m-auto h-0.5 w-6 rounded bg-red-900 transition duration-300"
-                ></div>
-                <div
-                  aria-hidden="true"
-                  class="m-auto mt-2 h-0.5 w-6 rounded bg-red-900 transition duration-300"
-                ></div>
-              </label>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="dist/output.css" rel="stylesheet" />
+  <title>My Portfolio</title>
+</head>
 
-              <div
-                class="font-semibold peer-checked:translate-x-0 fixed inset-0 w-[calc(100%-4.5rem)] translate-x-[-100%] bg-white border-r shadow-xl transition duration-300 lg:border-r-0 lg:w-auto lg:static lg:shadow-none lg:translate-x-0"
-              >
-                <div
-                  class="flex flex-col h-full justify-between lg:items-center lg:flex-row"
-                >
-                  <ul
-                    class="px-6 pt-32 text-gray-700 space-y-8 md:px-12 lg:space-y-0 lg:flex lg:space-x-12 lg:pt-0"
-                  >
-                    <li>
-                      <a
-                        href="#home"
-                        class="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0 before:bg-cyan-100 before:transition before:duration-200 hover:before:origin-left hover:before:scale-x-100"
-                      >
-                        <span class="relative text-cyan-800">Home</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#about"
-                        class="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0 before:bg-cyan-100 before:transition before:duration-200 hover:before:origin-left hover:before:scale-x-100"
-                      >
-                        <span class="relative group-hover:text-cyan-800"
-                          >About</span
-                        >
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#portfolio"
-                        class="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0 before:bg-cyan-100 before:transition before:duration-200 hover:before:origin-left hover:before:scale-x-100"
-                      >
-                        <span class="relative group-hover:text-cyan-800"
-                          >Portfolio</span
-                        >
-                      </a>
-                    </li>
-                    <!-- <li>
+<body>
+  <!-- Header Start -->
+  <header class="bg-transparent left-0 w-full top-0 sticky">
+    <div class="relative z-20 border-b bg-white">
+      <div class="px-6 md:px-12 lg:container lg:mx-auto lg:px-6 lg:py-4">
+        <div class="flex items-center justify-between">
+          <div class="relative z-20">
+            <a href="#">
+              <img src="/dist/img/logo.png" alt="logo-tailus" class="w-14" />
+            </a>
+          </div>
+
+          <div class="flex items-center justify-end border-l lg:border-l-0">
+            <input type="checkbox" name="hamburger" id="hamburger" class="peer" hidden />
+            <label for="hamburger"
+              class="peer-checked:hamburger block relative z-20 p-6 -mr-6 cursor-pointer lg:hidden">
+              <div aria-hidden="true" class="m-auto h-0.5 w-6 rounded bg-red-900 transition duration-300"></div>
+              <div aria-hidden="true" class="m-auto mt-2 h-0.5 w-6 rounded bg-red-900 transition duration-300"></div>
+            </label>
+
+            <div
+              class="font-semibold peer-checked:translate-x-0 fixed inset-0 w-[calc(100%-4.5rem)] translate-x-[-100%] bg-white border-r shadow-xl transition duration-300 lg:border-r-0 lg:w-auto lg:static lg:shadow-none lg:translate-x-0">
+              <div class="flex flex-col h-full justify-between lg:items-center lg:flex-row">
+                <ul class="px-6 pt-32 text-gray-700 space-y-8 md:px-12 lg:space-y-0 lg:flex lg:space-x-12 lg:pt-0">
+                  <li>
+                    <a href="#home"
+                      class="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0 before:bg-cyan-100 before:transition before:duration-200 hover:before:origin-left hover:before:scale-x-100">
+                      <span class="relative text-cyan-800">Home</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#about"
+                      class="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0 before:bg-cyan-100 before:transition before:duration-200 hover:before:origin-left hover:before:scale-x-100">
+                      <span class="relative group-hover:text-cyan-800">About</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#portfolio"
+                      class="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0 before:bg-cyan-100 before:transition before:duration-200 hover:before:origin-left hover:before:scale-x-100">
+                      <span class="relative group-hover:text-cyan-800">Portfolio</span>
+                    </a>
+                  </li>
+                  <!-- <li>
                       <a
                         href="#contact"
                         class="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0 before:bg-cyan-100 before:transition before:duration-200 hover:before:origin-left hover:before:scale-x-100"
@@ -88,653 +61,461 @@
                         >
                       </a>
                     </li> -->
-                  </ul>
+                </ul>
 
-                  <!-- <div class="border-t py-8 px-6 md:px-12 md:py-16 lg:border-t-0 lg:border-l lg:py-0 lg:pr-0 lg:pl-6">
+                <!-- <div class="border-t py-8 px-6 md:px-12 md:py-16 lg:border-t-0 lg:border-l lg:py-0 lg:pr-0 lg:pl-6">
                       <a href="#" class="block px-6 py-3 rounded-full bg-gradient-to-r from-sky-600 to-cyan-400 text-center text-white">
                         Get started
                       </a>
                     </div> -->
-                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </header>
-    <!-- Header End -->
+    </div>
+  </header>
+  <!-- Header End -->
 
-    <!-- Hero Section Star -->
-    <section id="home" class="pt-0 bg-cover">
-      <style>
-        .writer {
-          /* font-family: Inter, monospace; */
-          display: inline-block;
-        }
-        .writer-text {
-          display: inline-block;
-          overflow: hidden;
-          letter-spacing: 2px;
-          animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
-          white-space: nowrap;
-          /* font-size: 30px; */
-          /* font-weight: 700; */
-          border-right: 4px solid orange;
-          box-sizing: border-box;
-        }
+  <!-- Hero Section Star -->
+  <section id="home" class="pt-0 bg-cover">
+    <style>
+      .writer {
+        /* font-family: Inter, monospace; */
+        display: inline-block;
+      }
 
-        @keyframes typing {
-          from {
-            width: 0%;
-          }
-          to {
-            width: 100%;
-          }
+      .writer-text {
+        display: inline-block;
+        overflow: hidden;
+        letter-spacing: 2px;
+        animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+        white-space: nowrap;
+        /* font-size: 30px; */
+        /* font-weight: 700; */
+        border-right: 4px solid orange;
+        box-sizing: border-box;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0%;
         }
 
-        @keyframes blink {
-          from,
-          to {
-            border-color: transparent;
-          }
-          50% {
-            border-color: orange;
-          }
+        to {
+          width: 100%;
         }
-      </style>
-      <div class="w-full bg-center bg-bghome bg-fixed bg-cover">
-        <div
-          class="flex items-center justify-center w-full h-full bg-gray-900 bg-opacity-50 py-40"
-        >
-          <div class="text-center">
-            <h2 class="text-gray-200 text-2xl font-semibold">
-              Hi <span>👋</span>...I am
-            </h2>
-            <h1
-              class="mt-4 mb-4 text-4xl lg:text-4xl md:text-3xl font-bold text-gray-100"
-            >
-              Wira Dhana Putra
-            </h1>
-            <p
-              class="writer-text max-w-3xl mx-auto mb-10 text-lg text-gray-300"
-            >
-              Every day is learning
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Hero Section End -->
+      }
 
-    <!-- About Section Star -->
-    <section id="about" class="pt-32 mb-12">
-      <div class="container">
-        <div class="w-10/12 mx-auto">
-          <div
-            class="flex flex-wrap rounded-md bg-white shadow-lg shadow-teal-600"
-          >
-            <div class="w-full px-4 lg:w-1/2">
-              <h1
-                class="font-bold text-amber-500 uppercase text-xl mt-4 mb-3 md:text-2xl lg:text-3xl"
-              >
-                About Me
-              </h1>
-              <h2
-                class="font-bold text-slate-700 text-xl mb-2 max-w-md sm:text-xl md:text-2xl lg:text-3xl"
-              >
-                Utilizing Data and Analytics
-              </h2>
-              <p
-                class="font-normal text-base mb-10 text-slate-700 leading-relaxed max-w-md sm:text-xl sm:mt-4 md:text-xl lg:text-xl"
-              >
-                Passionate lifelong learner with a strong focus on deepening
-                data analyst & science skills to uncover actionable insights
-                from complex datasets.
-              </p>
-              <a
-                href="https://www.linkedin.com/in/wira-dhana-putra/"
-                target="_blank"
-                title="Linkedin"
-                class="text-base text-center uppercase text-white font-semibold bg-teal-500 px-8 py-3 rounded-full lg:w-2/3 hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
-                >Futher Me</a
-              >
+      @keyframes blink {
 
-              <div
-                class="flex flex-wrap items-center justify-center mt-12 mb-5"
-              >
-                <!-- Instagram -->
-                <a
-                  href="https://www.instagram.com/wira.depe/"
-                  target="_blank"
-                  class="w-9 h-9 m-3 rounded-full flex justify-center items-center border border-slate-400 text-slate-400 hover:border-teal-700 hover:bg-teal-500 hover:text-white"
-                >
-                  <svg
-                    role="img"
-                    width="20"
-                    class="fill-current"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Instagram</title>
-                    <path
-                      d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
-                    />
-                  </svg>
-                </a>
-                <!-- Twitter -->
-                <a
-                  href="https://twitter.com/wiradepe"
-                  target="_blank"
-                  class="w-9 h-9 m-3 rounded-full flex justify-center items-center border border-slate-400 text-slate-400 hover:border-teal-700 hover:bg-teal-500 hover:text-white"
-                >
-                  <svg
-                    role="img"
-                    width="20"
-                    class="fill-current"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Twitter</title>
-                    <path
-                      d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
-                    />
-                  </svg>
-                </a>
-                <!-- Facebook -->
-                <!-- <a
-                  href="https://facebook.com/wira.depe"
-                  target="_blank"
-                  class="w-9 h-9 m-3 rounded-full flex justify-center items-center border border-slate-400 text-slate-400 hover:border-teal-700 hover:bg-teal-500 hover:text-white"
-                >
-                  <svg
-                    role="img"
-                    width="20"
-                    class="fill-current"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Facebook</title>
-                    <path
-                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
-                    />
-                  </svg>
-                </a> -->
-                <!-- Github -->
-                <a
-                  href="https://github.com/Wiradp"
-                  target="_blank"
-                  class="w-9 h-9 m-3 rounded-full flex justify-center items-center border border-slate-400 text-slate-400 hover:border-teal-700 hover:bg-teal-500 hover:text-white"
-                >
-                  <svg
-                    role="img"
-                    width="20"
-                    class="fill-current"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>GitHub</title>
-                    <path
-                      d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
-                    />
-                  </svg>
-                </a>
-                <!-- Medium -->
-                <a
-                  href="https://medium.com/@wiradp"
-                  target="_blank"
-                  class="w-9 h-9 m-3 rounded-full flex justify-center items-center border border-slate-400 text-slate-400 hover:border-teal-700 hover:bg-teal-500 hover:text-white"
-                >
-                  <svg
-                    role="img"
-                    width="26"
-                    class="fill-current"
-                    viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Medium</title>
-                    <path
-                      d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 0 1 0 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 0 1 9.025 8zm4.95 0c0 2.34-1.01 4.236-2.256 4.236-1.246 0-2.256-1.897-2.256-4.236 0-2.34 1.01-4.236 2.256-4.236 1.246 0 2.256 1.897 2.256 4.236zM16 8c0 2.096-.355 3.795-.794 3.795-.438 0-.793-1.7-.793-3.795 0-2.096.355-3.795.794-3.795.438 0 .793 1.699.793 3.795z"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div class="w-full lg:w-1/2">
-              <div class="mt-10">
-                <img
-                  src="dist/img/foto-wira-2.png"
-                  alt="Wira Dhana Putra"
-                  class="rounded-full w-32 mx-auto"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="conteiner">
-        <div class="w-10/12 px-4 mx-auto">
-          <h1
-            class="font-bold text-slate-700 text-xl px-5 mt-10 mb-3 md:text-2xl lg:text-3xl xl:text-4xl"
-          >
-            Some Skills
+        from,
+        to {
+          border-color: transparent;
+        }
+
+        50% {
+          border-color: orange;
+        }
+      }
+    </style>
+    <div class="w-full bg-center bg-bghome bg-fixed bg-cover">
+      <div class="flex items-center justify-center w-full h-full bg-gray-900 bg-opacity-50 py-40">
+        <div class="text-center">
+          <h2 class="text-gray-200 text-2xl font-semibold">
+            Hi <span>👋</span>...I am
+          </h2>
+          <h1 class="mt-4 mb-4 text-4xl lg:text-4xl md:text-3xl font-bold text-gray-100">
+            Wira Dhana Putra
           </h1>
-          <div class="flex flex-wrap">
-            <!-- CSS -->
-            <span
-              class="w-14 h-14 m-3 rounded-md flex justify-center items-center border border-white text-slate-900 hover:border-teal-700 hover:bg-teal-500 hover:text-white"
-            >
-              <svg
-                role="img"
-                width="40"
-                class="fill-current"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>CSS3</title>
-                <path
-                  d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"
-                />
-              </svg>
-            </span>
-            <!-- Tailwind CSS -->
-            <span
-              class="w-14 h-14 m-3 rounded-md flex justify-center items-center border border-white text-slate-900 hover:border-teal-700 hover:bg-teal-500 hover:text-white"
-            >
-              <svg
-                role="img"
-                width="40"
-                class="fill-current"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>Tailwind CSS</title>
-                <path
-                  d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"
-                />
-              </svg>
-            </span>
-            <!-- HTML -->
-            <span
-              class="w-14 h-14 m-3 rounded-md flex justify-center items-center border border-white text-slate-900 hover:border-teal-700 hover:bg-teal-500 hover:text-white"
-            >
-              <svg
-                role="img"
-                width="40"
-                class="fill-current"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>HTML5</title>
-                <path
-                  d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"
-                />
-              </svg>
-            </span>
-            <!-- Python -->
-            <span
-              class="w-12 h-12 m-3 rounded-md flex justify-center items-center border border-white text-slate-900 hover:border-teal-700 hover:bg-teal-500 hover:text-white"
-            >
-              <svg
-                role="img"
-                width="40"
-                class="fill-current"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>Python</title>
-                <path
-                  d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"
-                />
-              </svg>
-            </span>
-            <!-- MySQL -->
-            <span
-              class="w-12 h-12 m-3 rounded-md flex justify-center items-center border border-white text-slate-900 hover:border-teal-700 hover:bg-teal-500 hover:text-white"
-            >
-              <svg
-                role="img"
-                width="40"
-                class="fill-current"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>MySQL</title>
-                <path
-                  d="M16.405 5.501c-.115 0-.193.014-.274.033v.013h.014c.054.104.146.18.214.273.054.107.1.214.154.32l.014-.015c.094-.066.14-.172.14-.333-.04-.047-.046-.094-.08-.14-.04-.067-.126-.1-.18-.153zM5.77 18.695h-.927a50.854 50.854 0 00-.27-4.41h-.008l-1.41 4.41H2.45l-1.4-4.41h-.01a72.892 72.892 0 00-.195 4.41H0c.055-1.966.192-3.81.41-5.53h1.15l1.335 4.064h.008l1.347-4.064h1.095c.242 2.015.384 3.86.428 5.53zm4.017-4.08c-.378 2.045-.876 3.533-1.492 4.46-.482.716-1.01 1.073-1.583 1.073-.153 0-.34-.046-.566-.138v-.494c.11.017.24.026.386.026.268 0 .483-.075.647-.222.197-.18.295-.382.295-.605 0-.155-.077-.47-.23-.944L6.23 14.615h.91l.727 2.36c.164.536.233.91.205 1.123.4-1.064.678-2.227.835-3.483zm12.325 4.08h-2.63v-5.53h.885v4.85h1.745zm-3.32.135l-1.016-.5c.09-.076.177-.158.255-.25.433-.506.648-1.258.648-2.253 0-1.83-.718-2.746-2.155-2.746-.704 0-1.254.232-1.65.697-.43.508-.646 1.256-.646 2.245 0 .972.19 1.686.574 2.14.35.41.877.615 1.583.615.264 0 .506-.033.725-.098l1.325.772.36-.622zM15.5 17.588c-.225-.36-.337-.94-.337-1.736 0-1.393.424-2.09 1.27-2.09.443 0 .77.167.977.5.224.362.336.936.336 1.723 0 1.404-.424 2.108-1.27 2.108-.445 0-.77-.167-.978-.5zm-1.658-.425c0 .47-.172.856-.516 1.156-.344.3-.803.45-1.384.45-.543 0-1.064-.172-1.573-.515l.237-.476c.438.22.833.328 1.19.328.332 0 .593-.073.783-.22a.754.754 0 00.3-.615c0-.33-.23-.61-.648-.845-.388-.213-1.163-.657-1.163-.657-.422-.307-.632-.636-.632-1.177 0-.45.157-.81.47-1.085.315-.278.72-.415 1.22-.415.512 0 .98.136 1.4.41l-.213.476a2.726 2.726 0 00-1.064-.23c-.283 0-.502.068-.654.206a.685.685 0 00-.248.524c0 .328.234.61.666.85.393.215 1.187.67 1.187.67.433.305.648.63.648 1.168zm9.382-5.852c-.535-.014-.95.04-1.297.188-.1.04-.26.04-.274.167.055.053.063.14.11.214.08.134.218.313.346.407.14.11.28.216.427.31.26.16.555.255.81.416.145.094.293.213.44.313.073.05.12.14.214.172v-.02c-.046-.06-.06-.147-.105-.214-.067-.067-.134-.127-.2-.193a3.223 3.223 0 00-.695-.675c-.214-.146-.682-.35-.77-.595l-.013-.014c.146-.013.32-.066.46-.106.227-.06.435-.047.67-.106.106-.027.213-.06.32-.094v-.06c-.12-.12-.21-.283-.334-.395a8.867 8.867 0 00-1.104-.823c-.21-.134-.476-.22-.697-.334-.08-.04-.214-.06-.26-.127-.12-.146-.19-.34-.275-.514a17.69 17.69 0 01-.547-1.163c-.12-.262-.193-.523-.34-.763-.69-1.137-1.437-1.826-2.586-2.5-.247-.14-.543-.2-.856-.274-.167-.008-.334-.02-.5-.027-.11-.047-.216-.174-.31-.235-.38-.24-1.364-.76-1.644-.072-.18.434.267.862.422 1.082.115.153.26.328.34.5.047.116.06.235.107.356.106.294.207.622.347.897.073.14.153.287.247.413.054.073.146.107.167.227-.094.136-.1.334-.154.5-.24.757-.146 1.693.194 2.25.107.166.362.534.703.393.3-.12.234-.5.32-.835.02-.08.007-.133.048-.187v.015c.094.188.188.367.274.555.206.328.566.668.867.895.16.12.287.328.487.402v-.02h-.015c-.043-.058-.1-.086-.154-.133a3.445 3.445 0 01-.35-.4 8.76 8.76 0 01-.747-1.218c-.11-.21-.202-.436-.29-.643-.04-.08-.04-.2-.107-.24-.1.146-.247.273-.32.453-.127.288-.14.642-.188 1.01-.027.007-.014 0-.027.014-.214-.052-.287-.274-.367-.46-.2-.475-.233-1.238-.06-1.785.047-.14.247-.582.167-.716-.042-.127-.174-.2-.247-.303a2.478 2.478 0 01-.24-.427c-.16-.374-.24-.788-.414-1.162-.08-.173-.22-.354-.334-.513-.127-.18-.267-.307-.368-.52-.033-.073-.08-.194-.027-.274.014-.054.042-.075.094-.09.088-.072.335.022.422.062.247.1.455.194.662.334.094.066.195.193.315.226h.14c.214.047.455.014.655.073.355.114.675.28.962.46a5.953 5.953 0 012.085 2.286c.08.154.115.295.188.455.14.33.313.663.455.982.14.315.275.636.476.897.1.14.502.213.682.286.133.06.34.115.46.188.23.14.454.3.67.454.11.076.443.243.463.378z"
-                />
-              </svg>
-            </span>
-            <!-- Tableau -->
-            <span
-              class="w-12 h-12 m-3 rounded-md flex justify-center items-center border border-white text-slate-900 hover:border-teal-700 hover:bg-teal-500 hover:text-white"
-            >
-              <svg
-                role="img"
-                width="40"
-                class="fill-current"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>Tableau</title>
-                <path
-                  d="M11.654.174V2.377H9.682v.58h1.972V5.16h.696V2.957h1.97v-.58h-1.97V.174h-.348zm6.03 2.262l-.002 1.623v1.623h-2.957v.927h2.957v3.188H18.725l.011-1.582.02-1.576 1.465-.02 1.46-.01v-.927H18.728V2.436h-.522zm-12.407.06V5.686H2.291v.925H5.277V9.801h.985V6.61h3.013v-.925H6.262V2.496H5.77zm6.086 5.27v3.593H8.06v1.188h3.304v3.596h1.28v-3.596H15.953v-1.188H12.643V7.766h-.637zm9.721 1.55v2.221h-2.012v.811h2.012v2.261h.887v-2.261H24v-.811h-2.029V9.317h-.422zm-19.111.131V11.621H0v.621H1.973v2.194H2.64v-2.194h2v-.62H2.609V9.446h-.318zm15.709 4.516v3.254h-3.016v.927h3.016v3.217h1.072v-3.216H21.74v-.928H18.754v-3.254h-.533zm-12.463.008v3.246H2.262v.928h2.957v3.189H6.32v-3.189h2.955v-.928H6.32V13.97h-.55zm6.316 4.578l.002 1.103v1.1H9.566v.812h1.971v2.262h.928l.012-1.119.017-1.143H14.463v-.812h-2V18.549h-.465z"
-                />
-              </svg>
-            </span>
-            <!-- Excel -->
-            <span
-              class="w-12 h-12 m-3 rounded-md flex justify-center items-center border border-white text-slate-900 hover:border-teal-700 hover:bg-teal-500 hover:text-white"
-            >
-              <svg
-                role="img"
-                width="40"
-                class="fill-current"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>Microsoft Excel</title>
-                <path
-                  d="M23 1.5q.41 0 .7.3.3.29.3.7v19q0 .41-.3.7-.29.3-.7.3H7q-.41 0-.7-.3-.3-.29-.3-.7V18H1q-.41 0-.7-.3-.3-.29-.3-.7V7q0-.41.3-.7Q.58 6 1 6h5V2.5q0-.41.3-.7.29-.3.7-.3zM6 13.28l1.42 2.66h2.14l-2.38-3.87 2.34-3.8H7.46l-1.3 2.4-.05.08-.04.09-.64-1.28-.66-1.29H2.59l2.27 3.82-2.48 3.85h2.16zM14.25 21v-3H7.5v3zm0-4.5v-3.75H12v3.75zm0-5.25V7.5H12v3.75zm0-5.25V3H7.5v3zm8.25 15v-3h-6.75v3zm0-4.5v-3.75h-6.75v3.75zm0-5.25V7.5h-6.75v3.75zm0-5.25V3h-6.75v3Z"
-                />
-              </svg>
-            </span>
-            <!-- Power BI -->
-            <span
-              class="w-12 h-12 m-3 rounded-md flex justify-center items-center border border-white text-slate-900 hover:border-teal-700 hover:bg-teal-500 hover:text-white"
-            >
-              <svg
-                role="img"
-                width="40"
-                class="fill-current"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>Power BI</title>
-                <path
-                  d="M10 12a1 1 0 0 1 1 1v11H4a1 1 0 0 1-1-1V13a1 1 0 0 1 1-1h6Zm-2-.5V7a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v17h-4.5V13a1.5 1.5 0 0 0-1.5-1.5H8Zm5-6V1a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v22a1 1 0 0 1-1 1h-3.5V7A1.5 1.5 0 0 0 15 5.5h-2Z"
-                />
-              </svg>
-            </span>
-            <!-- SAP -->
-            <span
-              class="w-12 h-12 m-3 rounded-md flex justify-center items-center border border-white text-slate-900 hover:border-teal-700 hover:bg-teal-500 hover:text-white"
-            >
-              <svg
-                role="img"
-                width="40"
-                class="fill-current"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>SAP</title>
-                <path
-                  d="M0 6.064v11.872h12.13L24 6.064zm3.264 2.208h.005c.863.001 1.915.245 2.676.633l-.82 1.43c-.835-.404-1.255-.442-1.73-.467-.708-.038-1.064.215-1.069.488-.007.332.669.633 1.305.838.964.306 2.19.715 2.377 1.9L7.77 8.437h2.046l2.064 5.576-.007-5.575h2.37c2.257 0 3.318.764 3.318 2.519 0 1.575-1.09 2.514-2.936 2.514h-.763l-.01 2.094-3.588-.003-.25-.908c-.37.122-.787.189-1.23.189-.456 0-.885-.071-1.263-.2l-.358.919-2 .006.09-.462c-.029.025-.057.05-.087.074-.535.43-1.208.629-2.037.644l-.213.002a5.075 5.075 0 0 1-2.581-.675l.73-1.448c.79.467 1.286.572 1.956.558.347-.007.598-.07.761-.239a.557.557 0 0 0 .156-.369c.007-.376-.53-.553-1.185-.756-.531-.164-1.135-.389-1.606-.735-.559-.41-.825-.924-.812-1.65a1.99 1.99 0 0 1 .566-1.377c.519-.537 1.357-.863 2.363-.863zm10.597 1.67v1.904h.521c.694 0 1.247-.23 1.248-.964 0-.709-.554-.94-1.248-.94zm-5.087.767l-.748 2.362c.223.085.481.133.757.133.268 0 .52-.047.742-.126l-.736-2.37z"
-                />
-              </svg>
-            </span>
-            <!-- Git -->
-            <!-- <span
-              class="w-12 h-12 m-3 rounded-md flex justify-center items-center border border-white text-slate-900 hover:border-teal-700 hover:bg-teal-500 hover:text-white"
-            >
-              <svg
-                role="img"
-                width="40"
-                class="fill-current"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>Git</title>
-                <path
-                  d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.545-.676-1.342-.396-2.009L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187"
-                />
-              </svg>
-            </span> -->
-          </div>
+          <p class="writer-text max-w-3xl mx-auto mb-10 text-lg text-gray-300">
+            Every day is learning
+          </p>
         </div>
       </div>
-    </section>
-    <!-- About Section End -->
+    </div>
+  </section>
+  <!-- Hero Section End -->
 
-    <!-- Portfolio Section Star -->
-    <section id="portfolio" class="pt-36 pb-32 bg-slate-100">
-      <div class="conteiner">
-        <div class="w-full px-4 justify-center items-center">
-          <div class="max-w-xl mx-auto text-center mb-16">
-            <h4 class="font-semibold text-2xl text-amber-500 uppercase mb-2">
-              Portfolio
-            </h4>
-            <!-- <h2 class="font-bold text-slate-900 text-xl mb-4">New Project</h2> -->
-            <p class="font-normal text-xl mb-10 text-slate-700">
-              keep learning, stay focused
-            </p>
+  <!-- About Section Star -->
+  <section id="about" class="pt-32 pb-28">
+    <div class="container">
+      <div class="flex flex-wrap w-full mx-auto items-center">
+        <div class="w-full self-center px-4 lg:w-1/2">
+          <h1 class="font-bold text-amber-500 text-2xl uppercase mt-4 mb-3 sm:text-2xl md:text-3xl lg:text-3xl">
+            About Me
+          </h1>
+          <h2 class="font-bold text-slate-700 text-xl mb-2 max-w-md sm:text-xl md:text-3xl lg:text-3xl">
+            Utilizing Data and Analytics
+          </h2>
+          <p
+            class="font-normal text-base mb-10 text-slate-700 leading-relaxed max-w-md sm:text-xl sm:mt-4 md:text-xl lg:text-xl">
+            Passionate lifelong learner with a strong focus on deepening data
+            analyst & science skills to uncover actionable insights from
+            complex datasets.
+          </p>
+          <a href="https://www.linkedin.com/in/wira-dhana-putra/" target="_blank" title="Linkedin"
+            class="text-base text-center uppercase text-white font-semibold bg-teal-500 px-8 py-3 rounded-full lg:w-2/3 hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">Futher
+            Me</a>
+          <h1 class=" font-bold text-slate-700 mx-auto text-xl mt-10 mb-3 md:text-xl lg:text-2xl xl:text-3xl">
+            Let's make friends
+          </h1>
+          <div class="w-full flex flex-wrap justify-items-start"><a href="https://www.instagram.com/wira.depe/"
+              target="_blank"
+              class="w-9 h-9 m-3 rounded-full flex justify-center items-center border border-slate-400 text-slate-400 hover:border-teal-700 hover:bg-teal-500 hover:text-white">
+              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>Instagram</title>
+                <path
+                  d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+              </svg>
+            </a>
+            <a href="https://twitter.com/wiradepe" target="_blank"
+              class="w-9 h-9 m-3 rounded-full flex justify-center items-center border border-slate-400 text-slate-400 hover:border-teal-700 hover:bg-teal-500 hover:text-white">
+              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>Twitter</title>
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+            <a href="https://github.com/Wiradp" target="_blank"
+              class="w-9 h-9 m-3 rounded-full flex justify-center items-center border border-slate-400 text-slate-400 hover:border-teal-700 hover:bg-teal-500 hover:text-white">
+              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>GitHub</title>
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+              </svg>
+            </a>
+            <a href="https://medium.com/@wiradp" target="_blank"
+              class="w-9 h-9 m-3 rounded-full flex justify-center items-center border border-slate-400 text-slate-400 hover:border-teal-700 hover:bg-teal-500 hover:text-white">
+              <svg role="img" width="26" class="fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <title>Medium</title>
+                <path d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 0 1
+                  0 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 0 1 9.025 8zm4.95
+                  0c0 2.34-1.01 4.236-2.256 4.236-1.246
+                  0-2.256-1.897-2.256-4.236 0-2.34 1.01-4.236 2.256-4.236 1.246
+                  0 2.256 1.897 2.256 4.236zM16 8c0 2.096-.355 3.795-.794
+                  3.795-.438 0-.793-1.7-.793-3.795
+                  0-2.096.355-3.795.794-3.795.438 0 .793 1.699.793 3.795z" </svg>
+            </a>
           </div>
-          <div class="flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
-            <div class="w-full px-4 md:w-1/2">
-              <div
-                class="bg-white rounded-xl shadow-lg shadow-teal-400 overflow-hidden mb-10"
-              >
-                <img
-                  src="/dist/img/data-science-using-python.png"
-                  alt="Data Science"
-                  class="w-full hover:scale-110 transition-all duration-500"
-                />
-                <div class="py-8 px-6">
-                  <a
-                    href="https://github.com/wiradp/Data-Science-with-Python/blob/main/README.md"
-                    target="_blank"
-                    class="block mb-3 hover:text-teal-500"
-                  >
-                    <h3 class="font-semibold text-xl text-slate-800 mt-4 mb-3">
-                      Data Science using Python
-                    </h3>
-                    <p
-                      class="font-medium text-base text-slate-700 mb-4 line-clamp-2 hover:line-clamp-none"
-                    >
-                      Data science combines math and statistics, specialized
-                      programming (Python), advanced analytics, artificial
-                      intelligence (AI), and machine learning with specific
-                      subject matter expertise to uncover actionable insights
-                      hidden in an organization's data. These insights can be
-                      used to guide decision making and strategic planning.
-                    </p>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="w-full px-4 md:w-1/2">
-              <div
-                class="bg-white rounded-xl shadow-lg shadow-teal-400 overflow-hidden mb-10"
-              >
-                <img
-                  src="/dist/img/PST.png"
-                  alt="vidio"
-                  class="w-full hover:scale-110 transition-all duration-500"
-                />
-                <div class="py-8 px-6">
-                  <a
-                    href="https://github.com/wiradp/Integrating-Python-SQL-Tableau/blob/main/README.md"
-                    target="_blank"
-                    class="block mb-3 hover:text-teal-500"
-                  >
-                    <h3
-                      class="font-semibold text-xl text-slate-800 mt-4 mb-3 line-clamp-1 hover:line-clamp-none"
-                    >
-                      Integrating Python, SQL and Tableau
-                    </h3>
-                    <p
-                      class="font-medium text-base text-slate-700 mb-4 line-clamp-2 hover:line-clamp-none"
-                    >
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Nesciunt distinctio sunt porro quaerat molestiae veritatis
-                      corrupti repellat inventore pariatur excepturi?
-                    </p>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="w-full px-4 md:w-1/2">
-              <div
-                class="bg-white rounded-xl shadow-lg shadow-teal-400 overflow-hidden mb-10"
-              >
-                <img
-                  src="/dist/img/data-analytics.png"
-                  alt="Data Analytics"
-                  class="w-full hover:scale-110 transition-all duration-500"
-                />
-                <div class="py-8 px-6">
-                  <a
-                    href="https://github.com/wiradp/Data-Analytics/blob/main/README.md"
-                    target="_blank"
-                    class="block mb-3 hover:text-teal-500"
-                  >
-                    <h3 class="font-semibold text-xl text-slate-800 mt-4 mb-3">
-                      Data Analytics
-                    </h3>
-                    <p
-                      class="font-medium text-base text-slate-700 mb-4 line-clamp-2 hover:line-clamp-none"
-                    >
-                      Data Analytics (DA) is the process of examining data sets
-                      in order to find trends and draw conclusions about the
-                      information they contain.
-                    </p>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="w-full px-4 md:w-1/2">
-              <div
-                class="bg-white rounded-xl shadow-lg shadow-teal-400 overflow-hidden mb-10"
-              >
-                <img
-                  src="/dist/img/prof-fin.png"
-                  alt="Data Data-Analytic-Professional-Finance-Analytics-with-Excel"
-                  class="w-full hover:scale-110 transition-all duration-500"
-                />
-                <div class="py-8 px-6">
-                  <a
-                    href="https://github.com/wiradp/Data-Analytic-Professional-Finance-Analytics-with-Excel/blob/main/README.md"
-                    target="_blank"
-                    class="block mb-3 hover:text-teal-500"
-                  >
-                    <h3
-                      class="font-semibold text-xl text-slate-800 mt-4 mb-3 line-clamp-1 hover:line-clamp-none"
-                    >
-                      Profesional Finance Analytics with Excel
-                    </h3>
-                    <p
-                      class="font-medium text-base text-slate-700 mb-4 line-clamp-2 hover:line-clamp-none"
-                    >
-                      Data analytics in finance involves using data and
-                      statistical techniques to analyze financial data to
-                      identify patterns, trends, and relationships that can
-                      inform financial decision making.
-                    </p>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="w-full px-4 md:w-1/2">
-              <div
-                class="bg-white rounded-xl shadow-lg shadow-teal-400 overflow-hidden mb-10"
-              >
-                <img
-                  src="/dist/img/sna.png"
-                  alt="Social Network Analysis"
-                  class="w-full hover:scale-110 transition-all duration-500"
-                />
-                <div class="py-8 px-6">
-                  <a
-                    href="https://github.com/wiradp/Social-Network-Analysis-With-Gephi/blob/main/README.md"
-                    target="_blank"
-                    class="block mb-3 hover:text-teal-500"
-                  >
-                    <h3
-                      class="font-semibold text-xl text-slate-800 mt-4 mb-3 line-clamp-1 hover:line-clamp-none"
-                    >
-                      Social Network Analysis with Gephi
-                    </h3>
-                    <p
-                      class="font-medium text-base text-slate-700 mb-4 line-clamp-2 hover:line-clamp-none"
-                    >
-                      Social Network Analysis (SNA) is a subfield of sociology
-                      and mathematics that studies the structure, patterns, and
-                      relationships among individuals or groups within a social
-                      network. It involves using network theory to study
-                      relationships among actors, such as people, organizations,
-                      or even countries, and the flow of information, resources,
-                      or influence within and between these networks.
-                    </p>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="w-full px-4 md:w-1/2">
-              <div
-                class="bg-white rounded-xl shadow-lg shadow-teal-400 overflow-hidden mb-10"
-              >
-                <img
-                  src="/dist/img/vidio.png"
-                  alt="vidio"
-                  class="w-full hover:scale-110 transition-all duration-500"
-                />
-                <div class="py-8 px-6">
-                  <a
-                    href="https://github.com/wiradp/Data-Driven-Decisions-On-Video-Streaming-Platform-/blob/main/README.md"
-                    target="_blank"
-                    class="block mb-3 hover:text-teal-500"
-                  >
-                    <h3
-                      class="font-semibold text-xl text-slate-800 mt-4 mb-3 line-clamp-1 hover:line-clamp-none"
-                    >
-                      Data - Driven Decisions on Video Streaming Platform
-                    </h3>
-                    <p
-                      class="font-medium text-base text-slate-700 mb-4 line-clamp-2 hover:line-clamp-none"
-                    >
-                      An example of data-driven decision-making is using digital
-                      intelligence tools to look at existing demand in a market
-                      for a specific product or service before deciding to enter
-                      it
-                    </p>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="w-full px-4 md:w-1/2">
-              <div
-                class="bg-white rounded-xl shadow-lg shadow-teal-400 overflow-hidden mb-10"
-              >
-                <img
-                  src="/dist/img/jurnalisme-data.png"
-                  alt="vidio"
-                  class="w-full hover:scale-110 transition-all duration-500"
-                />
-                <div class="py-8 px-6">
-                  <a
-                    href="https://github.com/wiradp/Jurnalisme-Data-Ungkap-Fakta-Lewat-Data/blob/main/README.md"
-                    target="_blank"
-                    class="block mb-3 hover:text-teal-500"
-                  >
-                    <h3
-                      class="font-semibold text-xl text-slate-800 mt-4 mb-3 line-clamp-1 hover:line-clamp-none"
-                    >
-                      Jurnalisme Data - Ungkap Fakta Lewat Data
-                    </h3>
-                    <p
-                      class="font-medium text-base text-slate-700 mb-4 line-clamp-2 hover:line-clamp-none"
-                    >
-                      Jurnalisme menemukan fakta dari data masih mentah atau
-                      belum diolah dan belum memiliki arti bagi pengguna
-                    </p>
-                  </a>
-                </div>
-              </div>
-            </div>
+
+        </div>
+        <div class="w-full self-center px-4 lg:w-1/2">
+          <div class="relative mt-10 right-0 lg:right-0 lg:mt-10">
+            <img src="dist/img/about-wira-bg4.png" alt="Wira Dhana Putra"
+              class="rounded-full max-w-xs mx-auto my-auto" />
+            <span class="absolute -bottom-1/3 -z-10 left-1/2 -translate-x-1/2">
+              <svg width="450" height="450" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"
+                width="100%" id="blobSvg" style="opacity: 1" filter="blur(0px)" transform="rotate(0)">
+                <defs>
+                  <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color: rgb(13 148 136)"></stop>
+                    <stop offset="100%" style="stop-color: rgb(20 184 166)"></stop>
+                  </linearGradient>
+                </defs>
+                <path id="blob" fill="url(#gradient)" style="opacity: 0.5">
+                  <animate attributeName="d" dur="3000ms" repeatCount="indefinite"
+                    values="M408.24461,332.63257Q415.26513,415.26513,332.63257,434.71568Q250,454.16622,179.33614,422.74697Q108.67228,391.32772,65.87585,320.66386Q23.07942,250,63.27221,176.73251Q103.46501,103.46501,176.73251,63.02288Q250,22.58075,311.86507,74.4253Q373.73015,126.26985,387.47712,188.13493Q401.22409,250,408.24461,332.63257Z;M405.0078,325.44624Q400.89248,400.89248,325.44624,434.97549Q250,469.0585,165.42535,444.1039Q80.8507,419.1493,84.75627,334.57465Q88.66184,250,94.44262,175.1117Q100.2234,100.2234,175.1117,82.29749Q250,64.37159,306.73538,100.45042Q363.47075,136.52925,386.29693,193.26462Q409.12312,250,405.0078,325.44624Z;M418.08664,320.33435Q390.6687,390.6687,320.33435,427.91946Q250,465.17023,188.27506,419.31005Q126.55013,373.44987,106.38448,311.72494Q86.21883,250,84.09726,165.98785Q81.9757,81.9757,165.98785,53.98938Q250,26.00305,311.1687,76.83282Q372.3374,127.6626,408.92099,188.8313Q445.50458,250,418.08664,320.33435Z;M449.05134,329.9003Q409.80059,409.80059,329.9003,451.15995Q250,492.5193,162.89881,458.36084Q75.79762,424.20238,65.04837,337.10119Q54.29911,250,85.74629,183.59673Q117.19347,117.19347,183.59673,88.1905Q250,59.18753,328.8549,75.73886Q407.7098,92.2902,448.00594,171.1451Q488.30208,250,449.05134,329.9003Z;M421.63508,307.39005Q364.7801,364.7801,307.39005,427.43403Q250,490.08796,191.6822,428.36178Q133.3644,366.6356,70.9089,308.3178Q8.4534,250,54.21728,174.99058Q99.98115,99.98115,174.99058,81.49686Q250,63.01257,330.66021,75.84607Q411.32042,88.67958,444.90524,169.33979Q478.49006,250,421.63508,307.39005Z;M423.42552,332.41134Q414.82268,414.82268,332.41134,424.30554Q250,433.78841,170.96572,420.92848Q91.93144,408.06856,46.07152,329.03428Q0.21159,250,66.88003,191.77423Q133.54846,133.54846,191.77423,102.82861Q250,72.10876,305.00592,106.04846Q360.01185,139.98815,396.0201,194.99408Q432.02836,250,423.42552,332.41134Z;M449.66467,329.57458Q409.14917,409.14917,329.57458,407.97733Q250,406.80549,191.3735,387.02924Q132.74701,367.25299,77.06026,308.6265Q21.3735,250,49.05191,163.36516Q76.73032,76.73032,163.36516,85.537Q250,94.34367,322.00775,100.16408Q394.01551,105.98449,442.09784,177.99225Q490.18018,250,449.66467,329.57458Z;M408.24461,332.63257Q415.26513,415.26513,332.63257,434.71568Q250,454.16622,179.33614,422.74697Q108.67228,391.32772,65.87585,320.66386Q23.07942,250,63.27221,176.73251Q103.46501,103.46501,176.73251,63.02288Q250,22.58075,311.86507,74.4253Q373.73015,126.26985,387.47712,188.13493Q401.22409,250,408.24461,332.63257Z">
+                  </animate>
+                </path>
+                <path id="blob" fill="url(#gradient)" style="opacity: 0.5">
+                  <animate attributeName="d" dur="3000ms" repeatCount="indefinite"
+                    values="M449.66467,329.57458Q409.14917,409.14917,329.57458,407.97733Q250,406.80549,191.3735,387.02924Q132.74701,367.25299,77.06026,308.6265Q21.3735,250,49.05191,163.36516Q76.73032,76.73032,163.36516,85.537Q250,94.34367,322.00775,100.16408Q394.01551,105.98449,442.09784,177.99225Q490.18018,250,449.66467,329.57458Z;M408.24461,332.63257Q415.26513,415.26513,332.63257,434.71568Q250,454.16622,179.33614,422.74697Q108.67228,391.32772,65.87585,320.66386Q23.07942,250,63.27221,176.73251Q103.46501,103.46501,176.73251,63.02288Q250,22.58075,311.86507,74.4253Q373.73015,126.26985,387.47712,188.13493Q401.22409,250,408.24461,332.63257Z;M395.5,320Q390,390,320,400Q250,410,172,408Q94,406,59,328Q24,250,70.5,183.5Q117,117,183.5,108Q250,99,335,89.5Q420,80,410.5,165Q401,250,395.5,320Z;M409.06419,322.5266Q395.0532,395.0532,322.5266,445.11739Q250,495.18159,163.51944,459.07135Q77.03888,422.96112,82.39949,336.48056Q87.7601,250,115.64271,196.76266Q143.52532,143.52532,196.76266,76.83657Q250,10.14783,323.24578,56.82813Q396.49156,103.50844,409.78338,176.75422Q423.07519,250,409.06419,322.5266Z;M446.86448,329.36764Q408.73529,408.73529,329.36764,419.76576Q250,430.79624,166.60504,423.79308Q83.21008,416.78992,69.36975,333.39496Q55.52942,250,96.13341,193.3687Q136.7374,136.7374,193.3687,119.10083Q250,101.46426,313.50105,112.23108Q377.00211,122.99789,430.99789,186.49895Q484.99368,250,446.86448,329.36764Z;M421.63508,307.39005Q364.7801,364.7801,307.39005,427.43403Q250,490.08796,191.6822,428.36178Q133.3644,366.6356,70.9089,308.3178Q8.4534,250,54.21728,174.99058Q99.98115,99.98115,174.99058,81.49686Q250,63.01257,330.66021,75.84607Q411.32042,88.67958,444.90524,169.33979Q478.49006,250,421.63508,307.39005Z;M418.08664,320.33435Q390.6687,390.6687,320.33435,427.91946Q250,465.17023,188.27506,419.31005Q126.55013,373.44987,106.38448,311.72494Q86.21883,250,84.09726,165.98785Q81.9757,81.9757,165.98785,53.98938Q250,26.00305,311.1687,76.83282Q372.3374,127.6626,408.92099,188.8313Q445.50458,250,418.08664,320.33435Z;M449.66467,329.57458Q409.14917,409.14917,329.57458,407.97733Q250,406.80549,191.3735,387.02924Q132.74701,367.25299,77.06026,308.6265Q21.3735,250,49.05191,163.36516Q76.73032,76.73032,163.36516,85.537Q250,94.34367,322.00775,100.16408Q394.01551,105.98449,442.09784,177.99225Q490.18018,250,449.66467,329.57458Z">
+                  </animate>
+                </path>
+              </svg>
+            </span>
           </div>
         </div>
       </div>
 
-      <!-- <div class="conteiner">
+      <div class="w-full pt-36">
+        <h1
+          class="text-center font-bold text-slate-700 px-4 mx-auto text-xl mt-10 mb-3 md:text-xl lg:text-2xl xl:text-3xl">
+          Some Skills
+        </h1>
+        <div class="flex flex-wrap justify-center">
+          <!-- Python -->
+          <span
+            class="w-12 h-12 m-3 rounded-md flex justify-center items-center border border-white text-slate-900 hover:border-teal-700 hover:bg-teal-500 hover:text-white">
+            <svg role="img" width="40" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title>Python</title>
+              <path
+                d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z" />
+            </svg>
+          </span>
+          <!-- MySQL -->
+          <span
+            class="w-12 h-12 m-3 rounded-md flex justify-center items-center border border-white text-slate-900 hover:border-teal-700 hover:bg-teal-500 hover:text-white">
+            <svg role="img" width="40" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title>MySQL</title>
+              <path
+                d="M16.405 5.501c-.115 0-.193.014-.274.033v.013h.014c.054.104.146.18.214.273.054.107.1.214.154.32l.014-.015c.094-.066.14-.172.14-.333-.04-.047-.046-.094-.08-.14-.04-.067-.126-.1-.18-.153zM5.77 18.695h-.927a50.854 50.854 0 00-.27-4.41h-.008l-1.41 4.41H2.45l-1.4-4.41h-.01a72.892 72.892 0 00-.195 4.41H0c.055-1.966.192-3.81.41-5.53h1.15l1.335 4.064h.008l1.347-4.064h1.095c.242 2.015.384 3.86.428 5.53zm4.017-4.08c-.378 2.045-.876 3.533-1.492 4.46-.482.716-1.01 1.073-1.583 1.073-.153 0-.34-.046-.566-.138v-.494c.11.017.24.026.386.026.268 0 .483-.075.647-.222.197-.18.295-.382.295-.605 0-.155-.077-.47-.23-.944L6.23 14.615h.91l.727 2.36c.164.536.233.91.205 1.123.4-1.064.678-2.227.835-3.483zm12.325 4.08h-2.63v-5.53h.885v4.85h1.745zm-3.32.135l-1.016-.5c.09-.076.177-.158.255-.25.433-.506.648-1.258.648-2.253 0-1.83-.718-2.746-2.155-2.746-.704 0-1.254.232-1.65.697-.43.508-.646 1.256-.646 2.245 0 .972.19 1.686.574 2.14.35.41.877.615 1.583.615.264 0 .506-.033.725-.098l1.325.772.36-.622zM15.5 17.588c-.225-.36-.337-.94-.337-1.736 0-1.393.424-2.09 1.27-2.09.443 0 .77.167.977.5.224.362.336.936.336 1.723 0 1.404-.424 2.108-1.27 2.108-.445 0-.77-.167-.978-.5zm-1.658-.425c0 .47-.172.856-.516 1.156-.344.3-.803.45-1.384.45-.543 0-1.064-.172-1.573-.515l.237-.476c.438.22.833.328 1.19.328.332 0 .593-.073.783-.22a.754.754 0 00.3-.615c0-.33-.23-.61-.648-.845-.388-.213-1.163-.657-1.163-.657-.422-.307-.632-.636-.632-1.177 0-.45.157-.81.47-1.085.315-.278.72-.415 1.22-.415.512 0 .98.136 1.4.41l-.213.476a2.726 2.726 0 00-1.064-.23c-.283 0-.502.068-.654.206a.685.685 0 00-.248.524c0 .328.234.61.666.85.393.215 1.187.67 1.187.67.433.305.648.63.648 1.168zm9.382-5.852c-.535-.014-.95.04-1.297.188-.1.04-.26.04-.274.167.055.053.063.14.11.214.08.134.218.313.346.407.14.11.28.216.427.31.26.16.555.255.81.416.145.094.293.213.44.313.073.05.12.14.214.172v-.02c-.046-.06-.06-.147-.105-.214-.067-.067-.134-.127-.2-.193a3.223 3.223 0 00-.695-.675c-.214-.146-.682-.35-.77-.595l-.013-.014c.146-.013.32-.066.46-.106.227-.06.435-.047.67-.106.106-.027.213-.06.32-.094v-.06c-.12-.12-.21-.283-.334-.395a8.867 8.867 0 00-1.104-.823c-.21-.134-.476-.22-.697-.334-.08-.04-.214-.06-.26-.127-.12-.146-.19-.34-.275-.514a17.69 17.69 0 01-.547-1.163c-.12-.262-.193-.523-.34-.763-.69-1.137-1.437-1.826-2.586-2.5-.247-.14-.543-.2-.856-.274-.167-.008-.334-.02-.5-.027-.11-.047-.216-.174-.31-.235-.38-.24-1.364-.76-1.644-.072-.18.434.267.862.422 1.082.115.153.26.328.34.5.047.116.06.235.107.356.106.294.207.622.347.897.073.14.153.287.247.413.054.073.146.107.167.227-.094.136-.1.334-.154.5-.24.757-.146 1.693.194 2.25.107.166.362.534.703.393.3-.12.234-.5.32-.835.02-.08.007-.133.048-.187v.015c.094.188.188.367.274.555.206.328.566.668.867.895.16.12.287.328.487.402v-.02h-.015c-.043-.058-.1-.086-.154-.133a3.445 3.445 0 01-.35-.4 8.76 8.76 0 01-.747-1.218c-.11-.21-.202-.436-.29-.643-.04-.08-.04-.2-.107-.24-.1.146-.247.273-.32.453-.127.288-.14.642-.188 1.01-.027.007-.014 0-.027.014-.214-.052-.287-.274-.367-.46-.2-.475-.233-1.238-.06-1.785.047-.14.247-.582.167-.716-.042-.127-.174-.2-.247-.303a2.478 2.478 0 01-.24-.427c-.16-.374-.24-.788-.414-1.162-.08-.173-.22-.354-.334-.513-.127-.18-.267-.307-.368-.52-.033-.073-.08-.194-.027-.274.014-.054.042-.075.094-.09.088-.072.335.022.422.062.247.1.455.194.662.334.094.066.195.193.315.226h.14c.214.047.455.014.655.073.355.114.675.28.962.46a5.953 5.953 0 012.085 2.286c.08.154.115.295.188.455.14.33.313.663.455.982.14.315.275.636.476.897.1.14.502.213.682.286.133.06.34.115.46.188.23.14.454.3.67.454.11.076.443.243.463.378z" />
+            </svg>
+          </span>
+          <!-- Tableau -->
+          <span
+            class="w-12 h-12 m-3 rounded-md flex justify-center items-center border border-white text-slate-900 hover:border-teal-700 hover:bg-teal-500 hover:text-white">
+            <svg role="img" width="40" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title>Tableau</title>
+              <path
+                d="M11.654.174V2.377H9.682v.58h1.972V5.16h.696V2.957h1.97v-.58h-1.97V.174h-.348zm6.03 2.262l-.002 1.623v1.623h-2.957v.927h2.957v3.188H18.725l.011-1.582.02-1.576 1.465-.02 1.46-.01v-.927H18.728V2.436h-.522zm-12.407.06V5.686H2.291v.925H5.277V9.801h.985V6.61h3.013v-.925H6.262V2.496H5.77zm6.086 5.27v3.593H8.06v1.188h3.304v3.596h1.28v-3.596H15.953v-1.188H12.643V7.766h-.637zm9.721 1.55v2.221h-2.012v.811h2.012v2.261h.887v-2.261H24v-.811h-2.029V9.317h-.422zm-19.111.131V11.621H0v.621H1.973v2.194H2.64v-2.194h2v-.62H2.609V9.446h-.318zm15.709 4.516v3.254h-3.016v.927h3.016v3.217h1.072v-3.216H21.74v-.928H18.754v-3.254h-.533zm-12.463.008v3.246H2.262v.928h2.957v3.189H6.32v-3.189h2.955v-.928H6.32V13.97h-.55zm6.316 4.578l.002 1.103v1.1H9.566v.812h1.971v2.262h.928l.012-1.119.017-1.143H14.463v-.812h-2V18.549h-.465z" />
+            </svg>
+          </span>
+          <!-- Excel -->
+          <span
+            class="w-12 h-12 m-3 rounded-md flex justify-center items-center border border-white text-slate-900 hover:border-teal-700 hover:bg-teal-500 hover:text-white">
+            <svg role="img" width="40" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title>Microsoft Excel</title>
+              <path
+                d="M23 1.5q.41 0 .7.3.3.29.3.7v19q0 .41-.3.7-.29.3-.7.3H7q-.41 0-.7-.3-.3-.29-.3-.7V18H1q-.41 0-.7-.3-.3-.29-.3-.7V7q0-.41.3-.7Q.58 6 1 6h5V2.5q0-.41.3-.7.29-.3.7-.3zM6 13.28l1.42 2.66h2.14l-2.38-3.87 2.34-3.8H7.46l-1.3 2.4-.05.08-.04.09-.64-1.28-.66-1.29H2.59l2.27 3.82-2.48 3.85h2.16zM14.25 21v-3H7.5v3zm0-4.5v-3.75H12v3.75zm0-5.25V7.5H12v3.75zm0-5.25V3H7.5v3zm8.25 15v-3h-6.75v3zm0-4.5v-3.75h-6.75v3.75zm0-5.25V7.5h-6.75v3.75zm0-5.25V3h-6.75v3Z" />
+            </svg>
+          </span>
+          <!-- Power BI -->
+          <span
+            class="w-12 h-12 m-3 rounded-md flex justify-center items-center border border-white text-slate-900 hover:border-teal-700 hover:bg-teal-500 hover:text-white">
+            <svg role="img" width="40" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title>Power BI</title>
+              <path
+                d="M10 12a1 1 0 0 1 1 1v11H4a1 1 0 0 1-1-1V13a1 1 0 0 1 1-1h6Zm-2-.5V7a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v17h-4.5V13a1.5 1.5 0 0 0-1.5-1.5H8Zm5-6V1a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v22a1 1 0 0 1-1 1h-3.5V7A1.5 1.5 0 0 0 15 5.5h-2Z" />
+            </svg>
+          </span>
+          <!-- SAP -->
+          <span
+            class="w-12 h-12 m-3 rounded-md flex justify-center items-center border border-white text-slate-900 hover:border-teal-700 hover:bg-teal-500 hover:text-white">
+            <svg role="img" width="40" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title>SAP</title>
+              <path
+                d="M0 6.064v11.872h12.13L24 6.064zm3.264 2.208h.005c.863.001 1.915.245 2.676.633l-.82 1.43c-.835-.404-1.255-.442-1.73-.467-.708-.038-1.064.215-1.069.488-.007.332.669.633 1.305.838.964.306 2.19.715 2.377 1.9L7.77 8.437h2.046l2.064 5.576-.007-5.575h2.37c2.257 0 3.318.764 3.318 2.519 0 1.575-1.09 2.514-2.936 2.514h-.763l-.01 2.094-3.588-.003-.25-.908c-.37.122-.787.189-1.23.189-.456 0-.885-.071-1.263-.2l-.358.919-2 .006.09-.462c-.029.025-.057.05-.087.074-.535.43-1.208.629-2.037.644l-.213.002a5.075 5.075 0 0 1-2.581-.675l.73-1.448c.79.467 1.286.572 1.956.558.347-.007.598-.07.761-.239a.557.557 0 0 0 .156-.369c.007-.376-.53-.553-1.185-.756-.531-.164-1.135-.389-1.606-.735-.559-.41-.825-.924-.812-1.65a1.99 1.99 0 0 1 .566-1.377c.519-.537 1.357-.863 2.363-.863zm10.597 1.67v1.904h.521c.694 0 1.247-.23 1.248-.964 0-.709-.554-.94-1.248-.94zm-5.087.767l-.748 2.362c.223.085.481.133.757.133.268 0 .52-.047.742-.126l-.736-2.37z" />
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About Section End -->
+
+  <!-- Portfolio Section Star -->
+  <section id="portfolio" class="pt-36 pb-32 bg-slate-100">
+    <div class="conteiner">
+      <div class="w-full px-4 justify-center items-center">
+        <div class="max-w-xl mx-auto text-center mb-16">
+          <h4 class="font-semibold text-base text-amber-500 uppercase mb-2">
+            Portfolio
+          </h4>
+          <h2 class="font-bold text-slate-700 text-3xl mb-2">New Projects</h2>
+          <p class="font-normal text-base mb-10 text-slate-700">
+            keep learning, stay focused
+          </p>
+        </div>
+        <div class="flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
+          <!-- Project Intro Python -->
+          <!-- <div class="w-full px-4 md:w-1/2">
+            <div class="bg-white rounded-xl shadow-lg shadow-teal-400 overflow-hidden mb-10">
+              <img src="/dist/img/data-science-using-python.png" alt="Data Science"
+                class="w-full hover:scale-110 transition-all duration-500" />
+              <div class="py-8 px-6">
+                <a href="https://github.com/wiradp/Data-Science-with-Python/blob/main/README.md" target="_blank"
+                  class="block mb-3 hover:text-teal-500">
+                  <h3 class="font-semibold text-xl text-slate-800 mt-4 mb-3">
+                    Data Science using Python
+                  </h3>
+                  <p class="font-medium text-base text-slate-700 mb-4 line-clamp-2 hover:line-clamp-none">
+                    Data science combines math and statistics, specialized
+                    programming (Python), advanced analytics, artificial
+                    intelligence (AI), and machine learning with specific
+                    subject matter expertise to uncover actionable insights
+                    hidden in an organization's data. These insights can be
+                    used to guide decision making and strategic planning.
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div> -->
+          <!-- Project Simple Cashier -->
+          <div class="w-full px-4 md:w-1/2">
+            <div class="bg-white rounded-lg shadow-lg shadow-teal-400 overflow-hidden mb-10">
+              <img src="/dist/img/simple-cashier.png" alt="Simple Cashier"
+                class="w-full hover:scale-110 transition-all duration-500" />
+              <div class="py-8 px-6">
+                <a href="https://github.com/wiradp/program-minimarket" target="_blank"
+                  class="block mb-3 hover:text-teal-500">
+                  <h3 class="font-semibold text-xl text-slate-800 mt-4 mb-3">
+                    Simple Cashier Program
+                  </h3>
+                  <p class="font-medium text-base text-slate-700 mb-4 line-clamp-2 hover:line-clamp-none">
+                    This interesting project is to develop a simple cashier program using the Python programming
+                    language. In this project,
+                    we will enter the world of programming and combine it with the daily needs of managing store or
+                    minimarket transactions.
+                    In this project, we design a workflow to calculate total purchases, record purchased items,
+                    calculate discounts and
+                    other transactions.
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Project Absenteeism -->
+          <!-- <div class="w-full px-4 md:w-1/2">
+            <div class="bg-white rounded-lg shadow-lg shadow-teal-400 overflow-hidden mb-10">
+              <img src="/dist/img/PST.png" alt="vidio" class="w-full hover:scale-110 transition-all duration-500" />
+              <div class="py-8 px-6">
+                <a href="https://github.com/wiradp/Integrating-Python-SQL-Tableau/blob/main/README.md" target="_blank"
+                  class="block mb-3 hover:text-teal-500">
+                  <h3 class="font-semibold text-xl text-slate-800 mt-4 mb-3 line-clamp-1 hover:line-clamp-none">
+                    Integrating Python, SQL and Tableau
+                  </h3>
+                  <p class="font-medium text-base text-slate-700 mb-4 line-clamp-2 hover:line-clamp-none">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nesciunt distinctio sunt porro quaerat molestiae veritatis
+                    corrupti repellat inventore pariatur excepturi?
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Project Amazon Sales -->
+          <div class="w-full px-4 md:w-1/2">
+            <div class="bg-white rounded-lg shadow-lg shadow-teal-400 overflow-hidden mb-10">
+              <img src="/dist/img/amazon-sales.png" alt="Amazon Sales"
+                class="w-full hover:scale-110 transition-all duration-500" />
+              <div class="py-8 px-6">
+                <a href="https://github.com/wiradp/amazon-sales-data-analytics" target="_blank"
+                  class="block mb-3 hover:text-teal-500">
+                  <h3 class="font-semibold text-xl text-slate-800 mt-4 mb-3 line-clamp-1 hover:line-clamp-none">
+                    Data Analytics - Amazon Sales
+                  </h3>
+                  <p class="font-medium text-base text-slate-700 mb-4 line-clamp-2 hover:line-clamp-none">
+                    Amazon is one of the world's major e-commerce platforms. With thousands of products sold every day
+                    and customers from
+                    all over the world, I feel that examining Amazon sales data will provide deep insights into industry
+                    patterns that will
+                    assist us in identifying viable business prospects.
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Airline Delay in US -->
+          <div class="w-full px-4 md:w-1/2">
+            <div class="bg-white rounded-lg shadow-lg shadow-teal-400 overflow-hidden mb-10">
+              <img src="/dist/img/airline-delay.png" alt="Airline Delay in US"
+                class="w-full hover:scale-110 transition-all duration-500" />
+              <div class="py-8 px-6">
+                <a href="https://github.com/wiradp/airline-delay-in-us-data-analytics" target="_blank"
+                  class="block mb-3 hover:text-teal-500">
+                  <h3 class="font-semibold text-xl text-slate-800 mt-4 mb-3 line-clamp-1 hover:line-clamp-none">
+                    Airline Delay in US
+                  </h3>
+                  <p class="font-medium text-base text-slate-700 mb-4 line-clamp-2 hover:line-clamp-none">
+                    In the intricate world of flight delays, airlines provide crucial insights by categorizing the
+                    causes into five distinct
+                    areas. Each of these categories sheds light on the underlying factors that disrupt air travel. By
+                    delving into these delay problem points, we aim to extract valuable insights that airlines,
+                    airports, and aviation
+                    authorities can use to enhance the efficiency, safety, and overall experience of air travel in the
+                    United States.
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Professional Finance Analytics with Excel -->
+          <div class="w-full px-4 md:w-1/2">
+            <div class="bg-white rounded-lg shadow-lg shadow-teal-400 overflow-hidden mb-10">
+              <img src="/dist/img/prof-finance.png" alt="Data Data-Analytic-Professional-Finance-Analytics-with-Excel"
+                class="w-full hover:scale-110 transition-all duration-500" />
+              <div class="py-8 px-6">
+                <a href="https://github.com/wiradp/Data-Analytic-Professional-Finance-Analytics-with-Excel/blob/main/README.md"
+                  target="_blank" class="block mb-3 hover:text-teal-500">
+                  <h3 class="font-semibold text-xl text-slate-800 mt-4 mb-3 line-clamp-1 hover:line-clamp-none">
+                    Profesional Finance Analytics with Excel
+                  </h3>
+                  <p class="font-medium text-base text-slate-700 mb-4 line-clamp-2 hover:line-clamp-none">
+                    Data analytics in finance is a multidimensional practice that harnesses data and statistical
+                    methodologies to dissect
+                    financial data, revealing hidden patterns, discerning evolving trends, and extracting meaningful
+                    relationships, all of
+                    which serve as the foundation for informed and strategic financial decision-making.
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Network Analysist -->
+          <!-- <div class="w-full px-4 md:w-1/2">
+            <div class="bg-white rounded-lg shadow-lg shadow-teal-400 overflow-hidden mb-10">
+              <img src="/dist/img/sna.png" alt="Social Network Analysis"
+                class="w-full hover:scale-110 transition-all duration-500" />
+              <div class="py-8 px-6">
+                <a href="https://github.com/wiradp/Social-Network-Analysis-With-Gephi/blob/main/README.md"
+                  target="_blank" class="block mb-3 hover:text-teal-500">
+                  <h3 class="font-semibold text-xl text-slate-800 mt-4 mb-3 line-clamp-1 hover:line-clamp-none">
+                    Social Network Analysis with Gephi
+                  </h3>
+                  <p class="font-medium text-base text-slate-700 mb-4 line-clamp-2 hover:line-clamp-none">
+                    Social Network Analysis (SNA) is a subfield of sociology
+                    and mathematics that studies the structure, patterns, and
+                    relationships among individuals or groups within a social
+                    network. It involves using network theory to study
+                    relationships among actors, such as people, organizations,
+                    or even countries, and the flow of information, resources,
+                    or influence within and between these networks.
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Driven Decision on Video Streaming -->
+          <div class="w-full px-4 md:w-1/2">
+            <div class="bg-white rounded-lg shadow-lg shadow-teal-400 overflow-hidden mb-10">
+              <img src="/dist/img/vidio.png" alt="vidio" class="w-full hover:scale-110 transition-all duration-500" />
+              <div class="py-8 px-6">
+                <a href="https://github.com/wiradp/Data-Driven-Decisions-On-Video-Streaming-Platform-/blob/main/README.md"
+                  target="_blank" class="block mb-3 hover:text-teal-500">
+                  <h3 class="font-semibold text-xl text-slate-800 mt-4 mb-3 line-clamp-1 hover:line-clamp-none">
+                    Data - Driven Decisions on Video Streaming Platform
+                  </h3>
+                  <p class="font-medium text-base text-slate-700 mb-4 line-clamp-2 hover:line-clamp-none">
+                    An example of data-driven decision-making is using digital
+                    intelligence tools to look at existing demand in a market
+                    for a specific product or service before deciding to enter
+                    it
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ungkap Fakta Lewat Data -->
+          <!-- <div class="w-full px-4 md:w-1/2">
+            <div class="bg-white rounded-lg shadow-lg shadow-teal-400 overflow-hidden mb-10">
+              <img src="/dist/img/jurnalisme-data.png" alt="vidio"
+                class="w-full hover:scale-110 transition-all duration-500" />
+              <div class="py-8 px-6">
+                <a href="https://github.com/wiradp/Jurnalisme-Data-Ungkap-Fakta-Lewat-Data/blob/main/README.md"
+                  target="_blank" class="block mb-3 hover:text-teal-500">
+                  <h3 class="font-semibold text-xl text-slate-800 mt-4 mb-3 line-clamp-1 hover:line-clamp-none">
+                    Jurnalisme Data - Ungkap Fakta Lewat Data
+                  </h3>
+                  <p class="font-medium text-base text-slate-700 mb-4 line-clamp-2 hover:line-clamp-none">
+                    Jurnalisme menemukan fakta dari data masih mentah atau
+                    belum diolah dan belum memiliki arti bagi pengguna
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="conteiner">
       <div class="w-full px-4">
         <div class="max-w-xl mx-auto text-center mb-16">
           <h4 class="font-semibold text-2xl uppercase text-amber-500 mb-2">Portfolio</h4>
@@ -782,11 +563,11 @@
       </div>
       
       </div> -->
-    </section>
-    <!-- Portfolio Section End -->
+  </section>
+  <!-- Portfolio Section End -->
 
-    <!-- Contact Me Start -->
-    <!-- <section id="contact" class="pt-36 pb-32">
+  <!-- Contact Me Start -->
+  <!-- <section id="contact" class="pt-36 pb-32">
       <div class="container">
         <div class="w-full px-4">
           <div class="max-w-xl mx-auto text-center mb-16">
@@ -845,61 +626,49 @@
         </form>
       </div>
     </section> -->
-    <!-- Contact Me End -->
+  <!-- Contact Me End -->
 
-    <!-- Footer Start -->
-    <footer>
-      <div class="conteiner bg-slate-700">
-        <div class="w-full lg:w-2/3 lg:mx-auto px-12 pt-8 pb-4">
-          <div class="flex justify-between">
-            <div class="font-medium">
-              <h3 class="font-semibold text-white text-xl mb-3">Contact Me</h3>
-              <p class="text-slate-300">wiradp@yahoo.com</p>
-              <!-- <img
+  <!-- Footer Start -->
+  <footer>
+    <div class="conteiner bg-slate-700">
+      <div class="w-full lg:w-2/3 lg:mx-auto px-12 pt-8 pb-4">
+        <div class="flex justify-between">
+          <div class="font-medium">
+            <h3 class="font-semibold text-white text-xl mb-3">Contact Me</h3>
+            <p class="text-slate-300">wiradp@yahoo.com</p>
+            <!-- <img
                 src="dist/img/logo-footer.png"
                 alt="logo-wira"
                 width="70"
                 class="pt-4"
               /> -->
-            </div>
-            <div class="my-auto mb-4">
-              <h3 class="font-semibold text-xl text-white mb-5">Link</h3>
-              <ul class="text-slate-300">
-                <li>
-                  <a
-                    href="#home"
-                    class="inline-block text-base mb-2 hover:text-teal-500"
-                    >Home</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#about"
-                    class="inline-block text-base mb-2 hover:text-teal-500"
-                    >About</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#portfolio"
-                    class="inline-block text-base mb-2 hover:text-teal-500"
-                    >Portfolio</a
-                  >
-                </li>
-                <!-- <li>
+          </div>
+          <div class="my-auto mb-4">
+            <h3 class="font-semibold text-xl text-white mb-5">Link</h3>
+            <ul class="text-slate-300">
+              <li>
+                <a href="#home" class="inline-block text-base mb-2 hover:text-teal-500">Home</a>
+              </li>
+              <li>
+                <a href="#about" class="inline-block text-base mb-2 hover:text-teal-500">About</a>
+              </li>
+              <li>
+                <a href="#portfolio" class="inline-block text-base mb-2 hover:text-teal-500">Portfolio</a>
+              </li>
+              <!-- <li>
                   <a
                     href="#contact"
                     class="inline-block text-base hover:text-teal-500"
                     >Contact Me</a
                   >
                 </li> -->
-              </ul>
-            </div>
+            </ul>
           </div>
-          <div class="w-full pt-10 border-t border-slate-400">
-            <div class="flex items-center justify-center mb-5">
-              <!-- Instagram -->
-              <!-- <a
+        </div>
+        <div class="w-full pt-10 border-t border-slate-400">
+          <div class="flex items-center justify-center mb-5">
+            <!-- Instagram -->
+            <!-- <a
                 href="https://www.instagram.com/wira.depe/"
                 target="_blank"
                 class="w-9 h-9 m-3 rounded-full flex justify-center items-center border border-slate-400 text-slate-400 hover:border-teal-700 hover:bg-teal-500 hover:text-white"
@@ -917,8 +686,8 @@
                   />
                 </svg>
               </a> -->
-              <!-- Twitter -->
-              <!-- <a
+            <!-- Twitter -->
+            <!-- <a
                 href="https://twitter.com/wiradepe"
                 target="_blank"
                 class="w-9 h-9 m-3 rounded-full flex justify-center items-center border border-slate-400 text-slate-400 hover:border-teal-700 hover:bg-teal-500 hover:text-white"
@@ -936,8 +705,8 @@
                   />
                 </svg>
               </a> -->
-              <!-- Facebook -->
-              <!-- <a
+            <!-- Facebook -->
+            <!-- <a
                 href="https://facebook.com/wira.depe"
                 target="_blank"
                 class="w-9 h-9 m-3 rounded-full flex justify-center items-center border border-slate-400 text-slate-400 hover:border-teal-700 hover:bg-teal-500 hover:text-white"
@@ -955,8 +724,8 @@
                   />
                 </svg>
               </a> -->
-              <!-- Github -->
-              <!-- <a
+            <!-- Github -->
+            <!-- <a
                 href="https://github.com/Wiradp"
                 target="_blank"
                 class="w-9 h-9 m-3 rounded-full flex justify-center items-center border border-slate-400 text-slate-400 hover:border-teal-700 hover:bg-teal-500 hover:text-white"
@@ -974,8 +743,8 @@
                   />
                 </svg>
               </a> -->
-              <!-- Linkdkn -->
-              <!-- <a
+            <!-- Linkdkn -->
+            <!-- <a
                 href="https://www.linkedin.com/in/wira-dhana-putra-95a08b66/"
                 target="_blank"
                 class="w-9 h-9 m-3 rounded-full flex justify-center items-center border border-slate-400 text-slate-400 hover:border-teal-700 hover:bg-teal-500 hover:text-white"
@@ -993,57 +762,49 @@
                   />
                 </svg>
               </a> -->
-            </div>
-            <p class="text-xs text-slate-400 text-center">
-              Copyright &copy;2022
-              <span class="text-amber-500">Wira Dhana Putra</span> built with 💓
-              using
-              <a
-                href="https://tailwindcss.com/"
-                target="_blank"
-                class="text-teal-500"
-                >Tailwind CSS</a
-              >
-            </p>
           </div>
+          <p class="text-xs text-slate-400 text-center">
+            Copyright &copy;2022
+            <span class="text-amber-500">Wira Dhana Putra</span> built with 💓
+            using
+            <a href="https://tailwindcss.com/" target="_blank" class="text-teal-500">Tailwind CSS</a>
+          </p>
         </div>
       </div>
-    </footer>
-    <!-- Footer End -->
-
-    <!-- Back To Top -->
-    <!-- <script src="/public/js/script.js"></script> -->
-    <div>
-      <button
-        id="to-top-button"
-        onclick="goToTop()"
-        title="Go To Top"
-        class="hidden fixed z-90 bottom-8 right-8 border-0 border-white w-14 h-14 rounded-full drop-shadow-md bg-teal-500 text-slate-800 text-4xl font-bold hover:border-2 hover:border-slate-500 hover:bg-teal-600 hover:text-white"
-      >
-        &#8679;
-      </button>
-
-      <!-- Javascript code -->
-      <script>
-        var toTopButton = document.getElementById("to-top-button");
-
-        // When the user scrolls down 200px from the top of the document, show the button
-        window.onscroll = function () {
-          if (
-            document.body.scrollTop > 200 ||
-            document.documentElement.scrollTop > 200
-          ) {
-            toTopButton.classList.remove("hidden");
-          } else {
-            toTopButton.classList.add("hidden");
-          }
-        };
-
-        // When the user clicks on the button, smoothy scroll to the top of the document
-        function goToTop() {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }
-      </script>
     </div>
-  </body>
+  </footer>
+  <!-- Footer End -->
+
+  <!-- Back To Top -->
+  <!-- <script src="/public/js/script.js"></script> -->
+  <div>
+    <button id="to-top-button" onclick="goToTop()" title="Go To Top"
+      class="hidden fixed z-90 bottom-8 right-8 border-0 border-white w-14 h-14 rounded-full drop-shadow-md bg-teal-500 text-slate-800 text-4xl font-bold hover:border-2 hover:border-slate-500 hover:bg-teal-600 hover:text-white">
+      &#8679;
+    </button>
+
+    <!-- Javascript code -->
+    <script>
+      var toTopButton = document.getElementById("to-top-button");
+
+      // When the user scrolls down 200px from the top of the document, show the button
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > 200 ||
+          document.documentElement.scrollTop > 200
+        ) {
+          toTopButton.classList.remove("hidden");
+        } else {
+          toTopButton.classList.add("hidden");
+        }
+      };
+
+      // When the user clicks on the button, smoothy scroll to the top of the document
+      function goToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
+  </div>
+</body>
+
 </html>
