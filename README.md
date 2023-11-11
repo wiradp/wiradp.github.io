@@ -4,6 +4,7 @@
 
 
 ### My Repositories
+- [Olist E-Commerce Data Analysis](https://github.com/wiradp/olist-e-commerce-data-analysis)
 - [Simple Cashier Program](https://github.com/wiradp/program-minimarket)
 - [Amazon Sales Data Analytics](https://github.com/wiradp/amazon-sales-data-analytics)
 - [Airline Delay in US](https://github.com/wiradp/airline-delay-in-us-data-analytics)
