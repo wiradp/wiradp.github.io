@@ -4,6 +4,8 @@
 
 
 ### My Repositories
+- [Data-Driven Campaign Strategy: Optimizing Funnel Conversion and Targeting for Maximum ROI](https://github.com/wiradp/sales-conversion/blob/main/README.md)
+- [Predicting Heart Disease: Conducted a comparative study of machine learning algorithms (Random Forest, Logistic Regression, SVM, Adaboost, KNN) to predict heart disease. Emphasized model selection, hyperparameter tuning, and performance evaluation](https://github.com/wiradp/heart_disease_project/blob/main/README.md)
 - [Healthcare Charges - Exploring Variability and Conducting a Comprehensive Analysis of Influencing Factors](https://github.com/wiradp/tagihan-kesehatan-data-analyst/blob/main/README.md)
 - [From Data to Insights: Analyzing Olist's E-commerce Performance](https://github.com/wiradp/olist-e-commerce-data-analysis)
 - [Simple Cashier Program - Developed a Python-based cashier program for various transactions](https://github.com/wiradp/program-minimarket)
