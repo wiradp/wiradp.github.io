@@ -916,6 +916,10 @@ video {
   flex-shrink: 0;
 }
 
+.grow {
+  flex-grow: 1;
+}
+
 .-translate-x-1\/2 {
   --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1030,6 +1034,10 @@ video {
 
 .gap-2 {
   gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .gap-y-2 {
@@ -1240,7 +1248,7 @@ video {
 }
 
 .bg-bghome {
-  background-image: url('/dist/img/home-bg3.jpg');
+  background-image: url('img/home-bg3.jpg');
 }
 
 .bg-gradient-to-r {
