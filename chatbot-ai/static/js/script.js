@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
    */
   async function analyzeWithGemini(text) {
     const VERCEL_PROXY_URL =
-      "https://chatbot-ai-backend-4cqoeatnn-chatbot-ai-backend.vercel.app/api/analyze";
+      "https://chatbot-ai-backend-4cqoeatnn-chatbot-ai-backend.vercel.app//api/analyze";
 
     // Untuk tes lokal, gunakan URL dari 'vercel dev'
     // const VERCEL_PROXY_URL = "http://localhost:3000/api/analyze";
