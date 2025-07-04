@@ -1,34 +1,33 @@
-/**
- * Chatbot AI Script - Frontend Only (No Backend)
- * Author: Wira DP + ChatGPT
- *
- * Features:
- * - Analyze text for Scam, Hoax, Gambling using Gemini API
- * - Works fully static on GitHub Pages
- * - Caches results locally
- * - Supports multi-language input/output
- */
-
 document.addEventListener("DOMContentLoaded", () => {
-  // 🔹 DOM Elements
+  // 🔹 Element Selections
   const inputText = document.getElementById("inputText");
   const charCount = document.getElementById("charCount");
   const analyzeBtn = document.getElementById("analyzeBtn");
+  // Tambahkan selector untuk teks di dalam tombol
+  const btnText = document.getElementById("btnText");
   const loading = document.getElementById("loading");
   const results = document.getElementById("results");
   const error = document.getElementById("error");
+  const errorMessage = document.getElementById("errorMessage");
 
-  // 🔹 Google Gemini API Key
-  const GEMINI_API_KEY = AIzaSyCPcdTGipnO7UH0D7A2m1ME7fOJ3uNdvso;
+  // Result fields
+  const statusBadge = document.getElementById("statusBadge");
+  const explanation = document.getElementById("explanation");
+  const indicatorsSection = document.getElementById("indicatorsSection");
+  const indicators = document.getElementById("indicators");
+  const confidence = document.getElementById("confidence");
+  const sentiment = document.getElementById("sentiment");
+  const languageInfo = document.getElementById("languageInfo");
+
+  const MAX_CHARS = 1000;
 
   /**
    * Character Counter
    */
   inputText.addEventListener("input", () => {
-    const length = inputText.value.length;
-    charCount.textContent = `${length}/1000 characters`;
-
-    if (length > 1000) {
+    const count = inputText.value.length;
+    charCount.textContent = `${count}/${MAX_CHARS} characters`;
+    if (count > MAX_CHARS) {
       charCount.classList.add("text-red-500");
     } else {
       charCount.classList.remove("text-red-500");
@@ -36,201 +35,125 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /**
-   * Analyze Button Click
+   * UI State Management
    */
-  analyzeBtn.addEventListener("click", async () => {
-    const text = inputText.value.trim();
-
-    if (!text) {
-      showError("Please enter the text you want to analyze.");
-      return;
-    }
-
-    if (text.length > 1000) {
-      showError("The text is too long (maximum 1000 characters).");
-      return;
-    }
-
-    // Optional: Cache Check
-    const cacheKey = "analysis_" + encodeURIComponent(text).slice(0, 64);
-    const cached = localStorage.getItem(cacheKey);
-    if (cached) {
-      console.log("✅ Loaded from cache");
-      showResults(JSON.parse(cached));
-      return;
-    }
-
-    // Start Analysis
-    hideAllSections();
-    showLoading();
-    analyzeBtn.disabled = true;
-    analyzeBtn.textContent = "Analyzing...";
-
-    try {
-      const result = await analyzeWithGemini(text);
-      showResults(result);
-      localStorage.setItem(cacheKey, JSON.stringify(result));
-    } catch (err) {
-      console.error("❌ Analysis error:", err);
-      showError("Error: " + err.message);
-    } finally {
-      hideLoading();
+  function showLoading(isLoading) {
+    if (isLoading) {
+      // Tampilkan blok loading utama
+      loading.classList.remove("hidden", "opacity-0");
+      // Nonaktifkan tombol dan ubah teksnya
+      analyzeBtn.disabled = true;
+      btnText.textContent = "Analyzing...";
+      // Sembunyikan hasil dan error sebelumnya
+      results.classList.add("hidden");
+      error.classList.add("hidden");
+    } else {
+      // Sembunyikan blok loading utama
+      loading.classList.add("hidden", "opacity-0");
+      // Aktifkan kembali tombol dan kembalikan teksnya
       analyzeBtn.disabled = false;
-      analyzeBtn.textContent = "Analyze Now";
-    }
-  });
-
-  /**
-   * Gemini API Call
-   */
-  async function analyzeWithGemini(text) {
-    const prompt = `
-You are an expert AI for detecting scams, hoaxes, online gambling promotions. 
-Analyze the text below and classify it into one of:
-1. "Scam"
-2. "Online Gambling"
-3. "Hoax"
-4. "Safe"
-
-Return a strict JSON with this structure:
-{
-  "category": "...",
-  "confidence": "...",
-  "explanation": "...",
-  "risk_indicators": [...]
-}
-
-Text to analyze:
-${text}`;
-
-    // 🔹 Call Gemini API
-    const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          contents: [{ parts: [{ text: prompt }] }],
-        }),
-      }
-    );
-
-    const data = await response.json();
-
-    // Validate Response
-    if (!data.candidates || !data.candidates[0].content.parts[0].text) {
-      throw new Error("No valid response from Gemini API.");
-    }
-
-    const rawText = data.candidates[0].content.parts[0].text.trim();
-    console.log("📤 Gemini raw response:", rawText);
-
-    // Try parsing JSON
-    try {
-      return JSON.parse(rawText);
-    } catch (parseErr) {
-      console.error("⚠️ Failed parsing:", rawText);
-      throw new Error("Failed to parse AI response. Check prompt formatting.");
+      btnText.textContent = "Analyze Now";
     }
   }
 
-  /**
-   * Show Results to UI
-   */
-  function showResults(result) {
-    hideError();
-    results.classList.remove("hidden");
+  function showError(message) {
+    errorMessage.textContent = message;
+    error.classList.remove("hidden");
+    results.classList.add("hidden");
+  }
 
-    // Category Badge
-    const statusBadge = document.getElementById("statusBadge");
-    const badgeColor = getBadgeColor(result.category);
-    statusBadge.innerHTML = `<span class="inline-flex items-center px-3 py-1 rounded-full text-base font-medium ${badgeColor}">${
-      result.category || "Unknown"
-    }</span>`;
+  function showResults(data) {
+    // Set Status Badge
+    const category = data.category || "Unknown";
+    let badgeColor = "bg-gray-500";
+    if (category === "Safe") badgeColor = "bg-green-500";
+    if (["Scam", "Hoax", "Online Gambling"].includes(category))
+      badgeColor = "bg-red-500";
+    statusBadge.innerHTML = `<span class="px-3 py-1 text-sm font-semibold text-white rounded-full ${badgeColor}">${category}</span>`;
 
-    // Explanation
-    document.getElementById("explanation").textContent =
-      result.explanation || "No explanation available";
+    // Set other fields
+    explanation.textContent = data.explanation || "No explanation provided.";
+    confidence.textContent = data.confidence || "N/A";
+    sentiment.textContent = data.sentiment || "N/A";
 
-    // Risk Indicators
-    const indicatorsList = document.getElementById("indicators");
-    const indicatorsSection = document.getElementById("indicatorsSection");
-    indicatorsList.innerHTML = "";
-
-    if (result.risk_indicators && result.risk_indicators.length > 0) {
-      result.risk_indicators.forEach((indicator) => {
-        const li = document.createElement("li");
-        li.textContent = indicator;
-        indicatorsList.appendChild(li);
-      });
+    // Set Risk Indicators
+    if (data.risk_indicators && data.risk_indicators.length > 0) {
+      indicators.innerHTML = data.risk_indicators
+        .map((item) => `<li>${item}</li>`)
+        .join("");
       indicatorsSection.classList.remove("hidden");
     } else {
       indicatorsSection.classList.add("hidden");
     }
 
-    // Confidence Level
-    document.getElementById("confidence").textContent = (
-      result.confidence || "Unknown"
-    ).toUpperCase();
-
-    // (Optional) Sentiment / Language Detection - disable if not in JSON
-    try {
-      if (result.language) {
-        showLanguageInfo(result.language);
-      }
-    } catch (e) {
-      console.log("No language detected in result.");
+    // Show language if available
+    if (data.language) {
+      languageInfo.textContent = `Detected Language: ${data.language}`;
+      languageInfo.classList.remove("hidden");
+      languageInfo.classList.remove("opacity-0");
+    } else {
+      languageInfo.textContent = "Detected Language: Unknown";
+      languageInfo.classList.remove("hidden");
+      languageInfo.classList.remove("opacity-0");
     }
+
+    results.classList.remove("hidden");
+    error.classList.add("hidden");
   }
 
   /**
-   * Error / Loading / Utility UI Functions
+   * Main Analyze Button Logic
    */
-  function showError(message) {
-    hideAllSections();
-    document.getElementById("errorMessage").textContent = message;
-    error.classList.remove("hidden");
-  }
+  analyzeBtn.addEventListener("click", async () => {
+    const text = inputText.value.trim();
 
-  function hideError() {
-    error.classList.add("hidden");
-  }
-
-  function showLoading() {
-    loading.classList.remove("hidden");
-  }
-
-  function hideLoading() {
-    loading.classList.add("hidden");
-  }
-
-  function hideAllSections() {
-    results.classList.add("hidden");
-    error.classList.add("hidden");
-    loading.classList.add("hidden");
-  }
-
-  function getBadgeColor(category) {
-    if (!category) return "bg-gray-100 text-gray-800";
-    switch (category.toLowerCase()) {
-      case "scam":
-        return "bg-red-100 text-red-800";
-      case "online gambling":
-        return "bg-orange-100 text-orange-800";
-      case "hoax":
-        return "bg-yellow-100 text-yellow-800";
-      case "safe":
-        return "bg-green-100 text-green-800";
-      default:
-        return "bg-gray-100 text-gray-800";
+    if (!text) {
+      showError("Please enter some text to analyze.");
+      return;
     }
-  }
+    if (text.length > MAX_CHARS) {
+      showError(`Text cannot exceed ${MAX_CHARS} characters.`);
+      return;
+    }
 
-  function showLanguageInfo(language) {
-    const el = document.getElementById("languageInfo");
-    if (!el) return;
+    showLoading(true);
 
-    el.textContent = `Language Detected: ${language}`;
-    el.classList.remove("hidden");
+    try {
+      const resultData = await analyzeWithGemini(text);
+      showResults(resultData);
+    } catch (err) {
+      console.error("Analysis failed:", err);
+      showError(err.message || "An unknown error occurred.");
+    } finally {
+      showLoading(false);
+    }
+  });
+
+  /**
+   * Gemini API Call via Vercel Proxy
+   */
+  async function analyzeWithGemini(text) {
+    const VERCEL_PROXY_URL =
+      "https://chatbot-ai-backend-4cqoeatnn-chatbot-ai-backend.vercel.app/api/analyze";
+
+    // Untuk tes lokal, gunakan URL dari 'vercel dev'
+    // const VERCEL_PROXY_URL = "http://localhost:3000/api/analyze";
+
+    const response = await fetch(VERCEL_PROXY_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text: text }), // Kirim teks mentah
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(
+        errorData.error || `Request failed with status ${response.status}`
+      );
+    }
+
+    const data = await response.json();
+    console.log("✅ Response from Vercel proxy:", data);
+    return data; // Data sudah dalam format JSON yang benar
   }
 });

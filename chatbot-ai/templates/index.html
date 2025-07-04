@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
         media="print" onload="this.media='all'">
 
-    <link href="./css/output.css" rel="stylesheet" />
+    <link href="/static/css/output.css" rel="stylesheet" />
 
     <style>
         body {
@@ -93,10 +93,10 @@
         </div>
 
         <!-- Results Section -->
-
         <div id="results" class="hidden bg-white/90 rounded-2xl shadow-lg p-8 sm:p-4 border border-blue-100">
             <div id="languageInfo"
-                class="mt-2 text-sm text-blue-500 font-medium opacity-0 transition-opacity duration-500"></div>
+                class="mt-2 mb-4 text-sm text-gray-700 font-medium opacity-0 transition-opacity duration-500">
+            </div>
             <h2 class="text-2xl sm:text-xl font-semibold text-blue-700 mb-4 flex items-center gap-2">
                 <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" stroke-width="2"
                     viewBox="0 0 24 24">
@@ -105,17 +105,14 @@
                 </svg>
                 Analysis Results
             </h2>
-
             <!-- Status Badge -->
             <div id="statusBadge" class="mb-4"></div>
-
             <!-- Details -->
             <div class="space-y-4">
                 <div class="bg-blue-50/60 rounded-xl p-4 sm:p-2">
                     <h3 class="font-medium text-blue-800 mb-2">Explanation:</h3>
-                    <p id="explanation" class="text-gray-700 text-lg sm:text-base"></p>
+                    <p id="explanation" class="text-gray-700 text-lg sm:text-base" aria-live="polite"></p>
                 </div>
-
                 <div id="indicatorsSection" class="bg-blue-50/60 rounded-xl p-4 sm:p-2">
                     <h3 class="font-medium text-blue-800 mb-2">Risk Indicators:</h3>
                     <ul id="indicators" class="list-disc list-inside text-gray-700 space-y-1 text-lg sm:text-base"></ul>
@@ -162,36 +159,9 @@
         </div>
     </footer>
 
-    <script src="./js/script.js"></script>
-    <script>
-        // Update character count dynamically
-        const textarea = document.getElementById('inputText');
-        const charCount = document.getElementById('charCount');
-        textarea.addEventListener('input', function () {
-            charCount.textContent = `${textarea.value.length}/1000 karakter`;
-        });
-    </script>
-
-    <script>
-        const analyzeBtn = document.getElementById('analyzeBtn');
-        const btnText = document.getElementById('btnText');
-        const btnSpinner = document.getElementById('btnSpinner');
-
-        analyzeBtn.addEventListener('click', function () {
-            // Sembunyikan tombol, tampilkan spinner
-            analyzeBtn.classList.add('invisible');
-            btnSpinner.classList.remove('hidden');
-            btnSpinner.classList.add('flex');
-
-            // Simulasi proses (misal AJAX/fetch)
-            setTimeout(function () {
-                // Tampilkan tombol, sembunyikan spinner
-                analyzeBtn.classList.remove('invisible');
-                btnSpinner.classList.add('hidden');
-                btnSpinner.classList.remove('flex');
-            }, 2000); // Ganti dengan proses asli Anda
-        });
-    </script>
+    <!-- Memuat satu file script utama dengan path yang benar -->
+    <!-- Path diperbaiki untuk keluar dari folder 'templates' terlebih dahulu -->
+    <script src="/static/js/script.js"></script>
 </body>
 
 </html>
