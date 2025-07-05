@@ -133,8 +133,12 @@ document.addEventListener("DOMContentLoaded", () => {
    * Gemini API Call via Vercel Proxy
    */
   async function analyzeWithGemini(text) {
+    // PENTING: Ganti URL ini dengan URL *produksi* dari Vercel Dashboard Anda.
+    // Contoh: https://chatbot-ai-backend.vercel.app/api/analyze (ganti "chatbot-ai-backend" dengan nama proyek Vercel Anda)
     const VERCEL_PROXY_URL =
-      "https://chatbot-ai-backend-4cqoeatnn-chatbot-ai-backend.vercel.app/api/analyze";
+      "https://chatbot-ai-backend-woad.vercel.app/api/analyze";
+    // const VERCEL_PROXY_URL =
+    //   "https://chatbot-ai-backend-4cqoeatnn-chatbot-ai-backend.vercel.app/api/analyze";
 
     // Untuk tes lokal, gunakan URL dari 'vercel dev'
     // const VERCEL_PROXY_URL = "http://localhost:3000/api/analyze";
