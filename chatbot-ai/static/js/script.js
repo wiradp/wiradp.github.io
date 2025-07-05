@@ -156,10 +156,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(
-        errorData.error || `Request failed with status ${response.status}`
-      );
+      // Coba baca pesan error dari body JSON respons backend dengan aman.
+      // Jika gagal (misalnya body bukan JSON), gunakan status HTTP sebagai gantinya.
+      const errorData = await response.json().catch(() => null);
+      const errorMessage =
+        errorData?.error || `Request failed with status ${response.status}`;
+      throw new Error(errorMessage);
     }
 
     const data = await response.json();
