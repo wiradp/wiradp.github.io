@@ -122,8 +122,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const resultData = await analyzeWithGemini(text);
       showResults(resultData);
     } catch (err) {
-      console.error("Analysis failed:", err);
-      showError(err.message || "An unknown error occurred.");
+      console.error("Analysis failed:", err.message);
+      // Provide a more user-friendly message
+      let userMessage = "Failed to analyze the text. Please try again later.";
+      if (err.message.includes("Failed to fetch")) {
+        userMessage =
+          "Could not connect to the analysis server. Please check your internet connection and try again.";
+      }
+      showError(userMessage);
     } finally {
       showLoading(false);
     }
