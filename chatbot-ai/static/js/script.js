@@ -139,19 +139,18 @@ document.addEventListener("DOMContentLoaded", () => {
    * Gemini API Call via Vercel Proxy
    */
   async function analyzeWithGemini(text) {
-    // PENTING: Ganti URL ini dengan URL *produksi* dari Vercel Dashboard Anda.
-    // Contoh: https://chatbot-ai-backend.vercel.app/api/analyze (ganti "chatbot-ai-backend" dengan nama proyek Vercel Anda)
     const BACKEND_API_URL =
-      "https://chatbot-ai-cekfakta.netlify.app/.netlify/functions/analyze";
-    // const VERCEL_PROXY_URL =
-    //   "https://chatbot-ai-backend-4cqoeatnn-chatbot-ai-backend.vercel.app/api/analyze";
-
-    // Untuk tes lokal, gunakan URL dari 'vercel dev'
-    // const VERCEL_PROXY_URL = "http://localhost:3000/api/analyze";
+      location.hostname === "localhost"
+        ? "http://localhost:8888/.netlify/functions/analyze"
+        : "https://chatbot-ai-cekfakta.netlify.app/.netlify/functions/analyze";
 
     const response = await fetch(BACKEND_API_URL, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "POST",
+      },
       body: JSON.stringify({ text: text }), // Kirim teks mentah
     });
 
