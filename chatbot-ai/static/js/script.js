@@ -139,10 +139,9 @@ document.addEventListener("DOMContentLoaded", () => {
    * Gemini API Call via Vercel Proxy
    */
   async function analyzeWithGemini(text) {
-    const BACKEND_API_URL =
-      location.hostname === "localhost"
-        ? "http://localhost:8888/.netlify/functions/analyze"
-        : "https://chatbot-ai-cekfakta.netlify.app/.netlify/functions/analyze";
+    const BACKEND_API_URL = location.hostname.includes("localhost")
+      ? "http://localhost:8888/.netlify/functions/analyze"
+      : "https://chatbot-ai-cekfakta.netlify.app/.netlify/functions/analyze";
 
     const response = await fetch(BACKEND_API_URL, {
       method: "POST",
