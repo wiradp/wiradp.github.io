@@ -163,7 +163,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const data = await response.json();
-    console.log("✅ Response from Vercel proxy:", data);
+    // console.log("✅ Response from Netlify proxy:", data);
+    console.log("Prompt:", prompt);
     return data; // Data sudah dalam format JSON yang benar
   }
 });
