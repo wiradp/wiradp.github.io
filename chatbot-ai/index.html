@@ -90,7 +90,7 @@
             class="hidden opacity-0 transition-opacity duration-500 ease-in-out bg-white/90 rounded-2xl shadow-lg p-8 sm:p-4 text-center border border-blue-100">
             <div class="flex flex-col items-center gap-3">
                 <div class="animate-spin rounded-full h-12 w-12 border-b-4 border-blue-500"></div>
-                <p class="mt-2 text-gray-600 sm:text-base text-lg">Analyze...</p>
+                <p class="mt-2 text-gray-600 sm:text-base text-lg">Analyzing your message, please wait...</p>
             </div>
         </div>
 
@@ -134,7 +134,7 @@
         </div>
 
         <!-- Error Section -->
-        <div id="error" class="hidden bg-red-50/90 border border-red-200 rounded-xl p-4 sm:p-2 shadow">
+        <div id="error" role="alert" class="hidden bg-red-50/90 border border-red-200 rounded-xl p-4 sm:p-2 shadow">
             <div class="flex items-start gap-2">
                 <div class="flex-shrink-0">
                     <svg class="h-6 w-6 text-red-400" viewBox="0 0 20 20" fill="currentColor">
@@ -144,7 +144,7 @@
                     </svg>
                 </div>
                 <div>
-                    <h3 class="text-base font-semibold text-red-800">Error occurred</h3>
+                    <h3 class="text-base font-semibold text-red-800">Oops, something went wrong</h3>
                     <p id="errorMessage" class="mt-1 text-red-700 text-sm"></p>
                 </div>
             </div>

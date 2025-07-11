@@ -136,35 +136,67 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /**
-   * Gemini API Call via Vercel Proxy
+   * Gemini API Call via Netlify Proxy
    */
+  // async function analyzeWithGemini(text) {
+  //   const BACKEND_API_URL = location.hostname.includes("localhost")
+  //     ? "http://localhost:8888/.netlify/functions/analyze"
+  //     : "https://chatbot-ai-cekfakta.netlify.app/.netlify/functions/analyze";
+
+  //   const response = await fetch(BACKEND_API_URL, {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       "Access-Control-Allow-Origin": "*",
+  //       "Access-Control-Allow-Methods": "POST",
+  //     },
+  //     body: JSON.stringify({ text: text }), // Kirim teks mentah
+  //   });
+
+  //   if (!response.ok) {
+  //     // Coba baca pesan error dari body JSON respons backend dengan aman.
+  //     // Jika gagal (misalnya body bukan JSON), gunakan status HTTP sebagai gantinya.
+  //     const errorData = await response.json().catch(() => null);
+  //     const errorMessage =
+  //       errorData?.error || `Request failed with status ${response.status}`;
+  //     throw new Error(errorMessage);
+  //   }
+
+  //   const data = await response.json();
+  //   // console.log("✅ Response from Netlify proxy:", data);
+  //   console.log("Prompt:", prompt);
+  //   console.log("event.httpMethod:", event.httpMethod);
+  //   return data; // Data sudah dalam format JSON yang benar
+  // }
+
   async function analyzeWithGemini(text) {
     const BACKEND_API_URL = location.hostname.includes("localhost")
       ? "http://localhost:8888/.netlify/functions/analyze"
       : "https://chatbot-ai-cekfakta.netlify.app/.netlify/functions/analyze";
 
-    const response = await fetch(BACKEND_API_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "POST",
-      },
-      body: JSON.stringify({ text: text }), // Kirim teks mentah
-    });
+    try {
+      const response = await fetch(BACKEND_API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ text: text }),
+      });
 
-    if (!response.ok) {
-      // Coba baca pesan error dari body JSON respons backend dengan aman.
-      // Jika gagal (misalnya body bukan JSON), gunakan status HTTP sebagai gantinya.
-      const errorData = await response.json().catch(() => null);
-      const errorMessage =
-        errorData?.error || `Request failed with status ${response.status}`;
-      throw new Error(errorMessage);
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => null);
+        const errorMessage =
+          errorData?.error || `Request failed with status ${response.status}`;
+        throw new Error(errorMessage);
+      }
+
+      const data = await response.json();
+      return data;
+    } catch (err) {
+      // Tangani error di sini agar error ditangkap oleh try-catch utama
+      throw new Error(
+        err.message || "Something went wrong. Please try again later."
+      );
     }
-
-    const data = await response.json();
-    // console.log("✅ Response from Netlify proxy:", data);
-    console.log("Prompt:", prompt);
-    return data; // Data sudah dalam format JSON yang benar
   }
 });
