@@ -4,8 +4,7 @@
 
 ### My Repositories
 
--[Chatbot AI: An intelligent web app that helps detect scams, hoaxes, and online gambling promotions using Azure OpenAI and Text Analytics. Just paste any suspicious message — the AI will analyze it, classify the risk, and explain why](https://github.com/wiradp/chatbot-ai-azure/blob/main/README.md)
-
+- Chatbot AI: An intelligent web app that helps detect scams, hoaxes, and online gambling promotions using Azure OpenAI and Text Analytics. Just paste any suspicious message — the AI will analyze it, classify the risk, and explain why](https://github.com/wiradp/chatbot-ai-azure/blob/main/README.md)
 - [Data-Driven Campaign Strategy: Optimizing Funnel Conversion and Targeting for Maximum ROI](https://github.com/wiradp/sales-conversion/blob/main/README.md)
 - [Predicting Heart Disease: Conducted a comparative study of machine learning algorithms (Random Forest, Logistic Regression, SVM, Adaboost, KNN) to predict heart disease. Emphasized model selection, hyperparameter tuning, and performance evaluation](https://github.com/wiradp/heart_disease_project/blob/main/README.md)
 - [Healthcare Charges - Exploring Variability and Conducting a Comprehensive Analysis of Influencing Factors](https://github.com/wiradp/tagihan-kesehatan-data-analyst/blob/main/README.md)
