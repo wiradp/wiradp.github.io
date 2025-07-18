@@ -63,13 +63,22 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function showResults(data) {
-    // Set Status Badge
-    const category = data.category || "Unknown";
-    let badgeColor = "bg-gray-500";
-    if (category === "Safe") badgeColor = "bg-green-500";
-    if (["Scam", "Hoax", "Online Gambling"].includes(category))
-      badgeColor = "bg-red-500";
-    statusBadge.innerHTML = `<span class="px-3 py-1 text-sm font-semibold text-white rounded-full ${badgeColor}">${category}</span>`;
+    // Tampilkan kategori
+    const categoryBadge = document.getElementById("categoryBadge");
+    if (data.category) {
+      let color = "bg-gray-200 text-gray-800";
+      if (data.category === "Hoax") color = "bg-yellow-200 text-yellow-800";
+      if (data.category === "Scam") color = "bg-red-200 text-red-800";
+      if (data.category === "Online Gambling" || data.category === "Gambling")
+        color = "bg-red-200 text-red-800";
+      if (data.category === "Safe") color = "bg-green-200 text-green-800";
+      categoryBadge.innerHTML = `<span class="inline-block px-3 py-1 rounded-full font-semibold ${color}">${data.category}</span>`;
+      console.log("categoryBadge.innerHTML:", categoryBadge.innerHTML);
+      categoryBadge.classList.remove("hidden");
+    } else {
+      categoryBadge.innerHTML = "";
+      categoryBadge.classList.add("hidden");
+    }
 
     // Set other fields
     explanation.textContent = data.explanation || "No explanation provided.";

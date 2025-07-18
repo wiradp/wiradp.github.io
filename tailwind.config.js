@@ -1,6 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./node_modules/flowbite/**/*.js"],
+  content: [
+    // "./index.html",
+    "./node_modules/flowbite/**/*.js",
+    "./*.html",
+    // "./**/*.html",
+    "./static/js/**/*.js",
+    "./chatbot-ai/**/*.html",
+    "./chatbot-ai/static/js/**/*.js",
+  ],
   theme: {
     container: {
       center: true,
