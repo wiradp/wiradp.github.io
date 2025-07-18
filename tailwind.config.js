@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+    "./index.html",
     // Pindai semua file HTML dan JS di dalam folder chatbot-ai
     "./chatbot-ai/**/*.html",
     "./chatbot-ai/static/js/**/*.js",
