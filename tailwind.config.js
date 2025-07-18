@@ -1,13 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    // "./index.html",
-    "./node_modules/flowbite/**/*.js",
-    "./*.html",
-    // "./**/*.html",
-    "./static/js/**/*.js",
+    // Pindai semua file HTML dan JS di dalam folder chatbot-ai
     "./chatbot-ai/**/*.html",
     "./chatbot-ai/static/js/**/*.js",
+    "./node_modules/flowbite/**/*.js", // Untuk komponen interaktif dari Flowbite
   ],
   theme: {
     container: {
